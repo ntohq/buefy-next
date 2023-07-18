@@ -10,14 +10,14 @@ describe('CheckRadioMixin', () => {
             template: '<div class="b-component"></div>'
         }
         wrapper = shallowMount(component, {
-            attachToDocument: true,
+            attachTo: document.body,
             mixins: [CheckRadioMixin]
         })
     })
 
-    it('set value prop', () => {
-        wrapper.setProps({
-            value: 'test'
+    it('set value prop', async () => {
+        await wrapper.setProps({
+            modelValue: 'test'
         })
         expect(wrapper.vm.newValue).toEqual('test')
     })
