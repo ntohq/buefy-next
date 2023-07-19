@@ -7,11 +7,11 @@ describe('CheckRadioMixin', () => {
     HTMLElement.prototype.insertAdjacentElement = jest.fn()
     beforeEach(() => {
         const component = {
-            template: '<div class="b-component"></div>'
+            template: '<div class="b-component"></div>',
+            mixins: [CheckRadioMixin]
         }
         wrapper = shallowMount(component, {
-            attachTo: document.body,
-            mixins: [CheckRadioMixin]
+            attachTo: document.body
         })
     })
 
