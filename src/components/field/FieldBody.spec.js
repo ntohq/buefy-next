@@ -87,4 +87,9 @@ describe('BFieldBody', () => {
             expect(wrapper.find('p.help').text()).toBe(message)
         })
     })
+
+    it('should be able to be instantiated without the default slot', () => {
+        const wrapper = shallowMount(BFieldBody)
+        expect(wrapper.find('.field-body').exists()).toBe(true)
+    })
 })
