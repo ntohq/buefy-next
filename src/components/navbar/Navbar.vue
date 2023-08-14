@@ -168,10 +168,16 @@ export default {
             ])
         },
         genNavbarBrandNode() {
+            let children
+            if (this.$slots.brand != null) {
+                children = [this.$slots.brand(), this.genBurgerNode()]
+            } else {
+                children = this.genBurgerNode()
+            }
             return createElement(
                 'div',
                 { class: 'navbar-brand' },
-                [this.$slots.brand(), this.genBurgerNode()]
+                children
             )
         },
         genBurgerNode() {
