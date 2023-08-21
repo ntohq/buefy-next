@@ -45,7 +45,7 @@ describe('BFieldBody', () => {
                     }
                 }
             })
-            expect(wrapper.exists(BField)).toBe(true)
+            expect(wrapper.findComponent(BField).exists()).toBe(true)
         })
 
         it('should pass type prop to the b-field element', () => {
