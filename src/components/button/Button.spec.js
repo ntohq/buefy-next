@@ -84,10 +84,6 @@ describe('BButton', () => {
         expect(wrapper.vm.computedTag).toBe('a')
 
         wrapper = shallowMount(BButton, {
-            // TODO: doesn't we need to set the tag prop?
-            // props: {
-            //     tag: 'a'
-            // },
             attrs: {
                 disabled: true
             }
