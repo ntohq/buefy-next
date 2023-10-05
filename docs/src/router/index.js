@@ -8,16 +8,19 @@ export function createDocsRouter(vueApp) {
             path,
             name: path,
             meta: routes[path],
-            component: () => import(`@/pages/${component}`/* @vite-ignore */)
+            // TODO: the following won't work when `component` contains
+            // multiple levels of directories; e.g., components/modal/Modal
+            // https://vitejs.dev/guide/features.html#dynamic-import
+            component: () => import(`@/pages/${component}.vue`)
         }
     }
 
     // Templates
-    const Documentation = () => import('@/templates/Documentation')
-    const NotFound = () => import('@/pages/404')
+    const Documentation = () => import('@/templates/Documentation.vue')
+    const NotFound = () => import('@/pages/404.vue')
 
     const router = createRouter({
-        history: createWebHistory(__dirname),
+        history: createWebHistory(),
         linkActiveClass: 'is-active',
         routes: [
             route('/', 'Home'),
