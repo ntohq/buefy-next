@@ -3,7 +3,7 @@ import {
     camelize,
     hyphenate,
     toHandlerKey
-} from 'vueshared' // eslint-disable-line vue/prefer-import-from-vue
+} from '@vue/shared' // eslint-disable-line vue/prefer-import-from-vue
 import { isVueComponent } from './helpers'
 
 export default {
