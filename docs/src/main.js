@@ -33,6 +33,9 @@ vueApp.use(router)
 
 vueApp.config.productionTip = false
 
+// Webpack inserts `global` but Vite does not
+// https://stackoverflow.com/a/73208485
+window.global ||= window
 global.Promise = Bluebird
 
 vueApp.config.globalProperties.$http = Axios
