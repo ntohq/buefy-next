@@ -118,8 +118,8 @@
 </template>
 
 <script>
-import buefyPackage from '../../package'
-import bulmaPackage from 'bulma/package'
+import buefyPackage from '../../../package.json'
+import bulmaPackage from 'bulma/package.json'
 
 export default {
     props: {
