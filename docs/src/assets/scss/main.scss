@@ -21,6 +21,7 @@
 @import "_templates";
 
 // Bulma
+// Vite confuses it as an ordinary JavaScript module if we do @import "bulma"
 @import "bulma/bulma";
 
 // Buefy

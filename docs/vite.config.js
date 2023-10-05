@@ -27,6 +27,7 @@ export default defineConfig({
         //     `npm install` in buefy-next/
         //
         // this workaround will be unnecessary when we introduce lerna
+        // https://vitejs.dev/config/server-options.html#server-fs-allow
         allow: ['..']
     }
   }
