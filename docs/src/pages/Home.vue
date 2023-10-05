@@ -182,10 +182,16 @@
                 window.open(url, '', opts)
             },
             getExpoImg(img) {
-                return require(`@/assets/expo/${img}`)
+                // require won't work on Vite
+                // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
+                // see also https://stackoverflow.com/a/71514878
+                return new URL(`/src/assets/expo/${img}`, import.meta.url).href
             },
             getSponsorImg(img) {
-                return require(`@/assets/sponsors/${img}`)
+                // require won't work on Vite
+                // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
+                // see also https://stackoverflow.com/a/71514878
+                return new URL(`/src/assets/sponsors/${img}`, import.meta.url).href
             }
         },
         mounted() {
