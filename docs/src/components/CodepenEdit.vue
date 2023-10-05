@@ -23,8 +23,8 @@
 </template>
 
 <script>
-// https://github.com/webpack-contrib/raw-loader/issues/91
-import dataTest from '@/data/sample.json.raw!=!raw-loader!@/data/sample.json'
+// https://vitejs.dev/guide/assets.html#importing-asset-as-string
+import dataTest from '@/data/sample.json?raw'
 import { preformat } from '@/utils'
 
 export default {
