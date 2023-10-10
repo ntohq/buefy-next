@@ -73,7 +73,7 @@
                 window.open(url, '', opts)
             },
             getImg(img) {
-                return require(`@/assets/expo/${img}`)
+                return new URL(`/src/assets/expo/${img}`, import.meta.url).href
             }
         }
     }
