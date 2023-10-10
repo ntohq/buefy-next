@@ -9,7 +9,7 @@
         </div>
 
         <b-image
-            :src="require('@/assets/buefy.png')"
+            :src="buefyLogo"
             alt="The Buefy Logo"
             ratio="601by235"
             :rounded="rounded"
@@ -24,10 +24,13 @@
 </template>
 
 <script>
+    const buefyLogo = new URL('/src/assets/buefy.png', import.meta.url).href
+
     export default {
         data() {
             return {
                 rounded: false,
+                buefyLogo,
             }
         }
     }

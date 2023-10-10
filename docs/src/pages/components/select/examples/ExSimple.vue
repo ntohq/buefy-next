@@ -93,7 +93,7 @@
 </template>
 
 <script>
-    const data = require('@/data/sample.json')
+    import data from '@/data/sample.json'
 
     export default {
         data() {
