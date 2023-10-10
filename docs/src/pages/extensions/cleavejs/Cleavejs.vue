@@ -26,7 +26,7 @@
 
 <script>
     import ExFormat from './examples/ExFormat'
-    import ExFormatCode from '!!raw-loader!./examples/ExFormat'
+    import ExFormatCode from './examples/ExFormat.vue?raw'
 
     export default {
         data() {

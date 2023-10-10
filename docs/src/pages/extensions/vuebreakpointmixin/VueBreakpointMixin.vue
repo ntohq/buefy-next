@@ -21,7 +21,7 @@
 
 <script>
 import ExVueBreakpointMixin from './example/ExVueBreakpointMixin'
-import ExVueBreakpointMixinCode from '!!raw-loader!./example/ExVueBreakpointMixin'
+import ExVueBreakpointMixinCode from './example/ExVueBreakpointMixin.vue?raw'
 
 export default {
   name: 'VueBreakpointMixin',
