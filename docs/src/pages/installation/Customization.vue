@@ -28,7 +28,7 @@
                     </div>
                 </b-message>
                 <div class="example is-paddingless">
-                    <CodeView :code="sass | pre" lang="sass" expanded/>
+                    <CodeView :code="preformat(sass)" lang="sass" expanded/>
                 </div>
 
             </div>
@@ -43,13 +43,15 @@
                 <b-message type="is-warning">
                     Please note that <code class="javascript">import 'buefy/dist/buefy.css'</code> from the <router-link to="/documentation/start">start section</router-link> has been omitted because it is not required when using scss.
                 </b-message>
-                <CodeView :code="importing | pre" lang="javascript" expanded/>
+                <CodeView :code="preformat(importing)" lang="javascript" expanded/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import { preformat } from '@/utils'
+
     export default {
         data() {
             return {
@@ -143,6 +145,7 @@
 
                 Vue.use(Buefy)`
             }
-        }
+        },
+        methods: { preformat }
     }
 </script>

@@ -52,8 +52,8 @@
                         </ul>
                     </div>
                 </b-message>
-                <CodeView title="Full bundle" :code="importingBundle | pre" lang="javascript" expanded/>
-                <CodeView title="Individual components as Vue plugins" :code="importingComponentsAsVuePlugins | pre" lang="javascript" expanded/>
+                <CodeView title="Full bundle" :code="preformat(importingBundle)" lang="javascript" expanded/>
+                <CodeView title="Individual components as Vue plugins" :code="preformat(importingComponentsAsVuePlugins)" lang="javascript" expanded/>
                 <b-message type="is-info">
                     To include individual styles, see <router-link to="/documentation/customization">Customization</router-link> section.
                 </b-message>
@@ -82,7 +82,7 @@
                 <hr>
 
                 <p class="title is-4">Usage example</p>
-                <CodeView :code="importingCDNHtml | pre" expanded/>
+                <CodeView :code="preformat(importingCDNHtml)" expanded/>
             </div>
         </div>
 
@@ -105,13 +105,15 @@
                 <p class="content">
                     Add <a href="https://github.com/buefy/nuxt-buefy">nuxt-buefy</a> to modules section of <code>nuxt.config.js</code>:
                 </p>
-                <CodeView :code="importingNuxtBuefy | pre" lang="javascript" expanded/>
+                <CodeView :code="preformat(importingNuxtBuefy)" lang="javascript" expanded/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import { preformat } from '@/utils'
+
     export default {
         data() {
             return {
@@ -187,6 +189,7 @@
             }
         },
         methods: {
+            preformat,
             slugifyTitle(title) {
                 if (!title) return ''
                 return title.toLowerCase()

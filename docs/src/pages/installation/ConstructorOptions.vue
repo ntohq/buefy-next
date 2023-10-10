@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class="block">
-            <CodeView title="Full bundle" :code="usageBundle | pre" lang="javascript" expanded/>
+            <CodeView title="Full bundle" :code="preformat(usageBundle)" lang="javascript" expanded/>
         </div>
 
         <div class="block">
-            <CodeView title="Individual components" :code="usageComponents | pre" lang="javascript" expanded/>
+            <CodeView title="Individual components" :code="preformat(usageComponents)" lang="javascript" expanded/>
         </div>
         
          <div class="block">
-            <CodeView title="CDN bundle" :code="usageCdn | pre" lang="javascript" expanded/>
+            <CodeView title="CDN bundle" :code="preformat(usageCdn)" lang="javascript" expanded/>
          </div>
 
         <ApiView :data="api"/>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+    import { preformat } from '@/utils'
     import api from './api/constructor-options'
 
     export default {
@@ -45,6 +46,7 @@
                 })
                 `
             }
-        }
+        },
+        methods: { preformat }
     }
 </script>
