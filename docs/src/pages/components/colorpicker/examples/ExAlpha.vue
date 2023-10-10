@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Color from '../../../../../src/utils/color'
+import Color from '../../../../../../src/utils/color'
 
 export default {
     data() {
