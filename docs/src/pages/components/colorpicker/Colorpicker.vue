@@ -20,19 +20,19 @@
     import variables from './variables/colorpicker'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExAlpha from './examples/ExAlpha'
-    import ExAlphaCode from '!!raw-loader!./examples/ExAlpha'
+    import ExAlphaCode from './examples/ExAlpha.vue?raw'
 
     import ExRepresentation from './examples/ExRepresentation'
-    import ExRepresentationCode from '!!raw-loader!./examples/ExRepresentation'
+    import ExRepresentationCode from './examples/ExRepresentation.vue?raw'
 
     import ExFormatter from './examples/ExFormatter'
-    import ExFormatterCode from '!!raw-loader!./examples/ExFormatter'
+    import ExFormatterCode from './examples/ExFormatter.vue?raw'
 
     import ExFields from './examples/ExFields'
-    import ExFieldsCode from '!!raw-loader!./examples/ExFields'
+    import ExFieldsCode from './examples/ExFields.vue?raw'
 
     export default {
         data() {

@@ -25,22 +25,22 @@
     import variables from './variables/steps'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExDynamic from './examples/ExDynamic'
-    import ExDynamicCode from '!!raw-loader!./examples/ExDynamic'
+    import ExDynamicCode from './examples/ExDynamic.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExVertical from './examples/ExVertical'
-    import ExVerticalCode from '!!raw-loader!./examples/ExVertical'
+    import ExVerticalCode from './examples/ExVertical.vue?raw'
 
     export default {
         data() {

@@ -40,22 +40,22 @@
     import variables from './variables/notification'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExAutoClose from './examples/ExAutoClose'
-    import ExAutoCloseCode from '!!raw-loader!./examples/ExAutoClose'
+    import ExAutoCloseCode from './examples/ExAutoClose.vue?raw'
 
     import ExAutoCloseWithProgressBar from './examples/ExAutoCloseWithProgressBar'
-    import ExAutoCloseWithProgressBarCode from '!!raw-loader!./examples/ExAutoCloseWithProgressBar'
+    import ExAutoCloseWithProgressBarCode from './examples/ExAutoCloseWithProgressBar.vue?raw'
 
     import ExProgrammatically from './examples/ExProgrammatically'
-    import ExProgrammaticallyCode from '!!raw-loader!./examples/ExProgrammatically'
+    import ExProgrammaticallyCode from './examples/ExProgrammatically.vue?raw'
 
     export default {
         data() {

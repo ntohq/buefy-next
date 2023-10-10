@@ -18,19 +18,19 @@
     import api from './api/collapse'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExPanelTemplate from './examples/ExPanelTemplate'
-    import ExPanelTemplateCode from '!!raw-loader!./examples/ExPanelTemplate'
+    import ExPanelTemplateCode from './examples/ExPanelTemplate.vue?raw'
 
     import ExCardTemplate from './examples/ExCardTemplate'
-    import ExCardTemplateCode from '!!raw-loader!./examples/ExCardTemplate'
+    import ExCardTemplateCode from './examples/ExCardTemplate.vue?raw'
 
     import ExPosition from './examples/ExPosition'
-    import ExPositionCode from '!!raw-loader!./examples/ExPosition'
+    import ExPositionCode from './examples/ExPosition.vue?raw'
 
     import ExAccordion from './examples/ExAccordion'
-    import ExAccordionCode from '!!raw-loader!./examples/ExAccordion'
+    import ExAccordionCode from './examples/ExAccordion.vue?raw'
 
     export default {
         data() {

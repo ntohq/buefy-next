@@ -62,16 +62,16 @@
     import ExWithCard from './examples/ExWithCard'
     import ExWithList from './examples/ExWithList'
 
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
-    import ExFullCode from '!!raw-loader!./examples/ExFull'
-    import ExArrowCode from '!!raw-loader!./examples/ExArrow'
-    import ExProgressCode from '!!raw-loader!./examples/ExProgress'
-    import ExIndicatorCode from '!!raw-loader!./examples/ExIndicator'
-    import ExCustomIndicatorCode from '!!raw-loader!./examples/ExCustomIndicator'
-    import ExGalleryCode from '!!raw-loader!./examples/ExGallery'
-    import ExCarouselListCode from '!!raw-loader!./examples/ExCarouselList'
-    import ExWithCardCode from '!!raw-loader!./examples/ExWithCard'
-    import ExWithListCode from '!!raw-loader!./examples/ExWithList'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
+    import ExFullCode from './examples/ExFull.vue?raw'
+    import ExArrowCode from './examples/ExArrow.vue?raw'
+    import ExProgressCode from './examples/ExProgress.vue?raw'
+    import ExIndicatorCode from './examples/ExIndicator.vue?raw'
+    import ExCustomIndicatorCode from './examples/ExCustomIndicator.vue?raw'
+    import ExGalleryCode from './examples/ExGallery.vue?raw'
+    import ExCarouselListCode from './examples/ExCarouselList.vue?raw'
+    import ExWithCardCode from './examples/ExWithCard.vue?raw'
+    import ExWithListCode from './examples/ExWithList.vue?raw'
 
 
     export default {

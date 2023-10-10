@@ -141,55 +141,55 @@
     import variables from './variables/table'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExSandbox from './examples/ExSandbox'
-    import ExSandboxCode from '!!raw-loader!./examples/ExSandbox'
+    import ExSandboxCode from './examples/ExSandbox.vue?raw'
 
     import ExSelection from './examples/ExSelection'
-    import ExSelectionCode from '!!raw-loader!./examples/ExSelection'
+    import ExSelectionCode from './examples/ExSelection.vue?raw'
 
     import ExCheckable from './examples/ExCheckable'
-    import ExCheckableCode from '!!raw-loader!./examples/ExCheckable'
+    import ExCheckableCode from './examples/ExCheckable.vue?raw'
 
     import ExSearchable from './examples/ExSearchable'
-    import ExSearchableCode from '!!raw-loader!./examples/ExSearchable'
+    import ExSearchableCode from './examples/ExSearchable.vue?raw'
 
     import ExSortMultiple from './examples/ExSortMultiple'
-    import ExSortMultipleCode from '!!raw-loader!./examples/ExSortMultiple'
+    import ExSortMultipleCode from './examples/ExSortMultiple.vue?raw'
 
     import ExPaginationSort from './examples/ExPaginationSort'
-    import ExPaginationSortCode from '!!raw-loader!./examples/ExPaginationSort'
+    import ExPaginationSortCode from './examples/ExPaginationSort.vue?raw'
 
     import ExDetailedRow from './examples/ExDetailedRow'
-    import ExDetailedRowCode from '!!raw-loader!./examples/ExDetailedRow'
+    import ExDetailedRowCode from './examples/ExDetailedRow.vue?raw'
 
     import ExCustomDetailedRow from './examples/ExCustomDetailedRow';
-    import ExCustomDetailedRowCode from '!!raw-loader!./examples/ExCustomDetailedRow';
+    import ExCustomDetailedRowCode from './examples/ExCustomDetailedRow.vue?raw';
 
     import ExRowStatus from './examples/ExRowStatus'
-    import ExRowStatusCode from '!!raw-loader!./examples/ExRowStatus'
+    import ExRowStatusCode from './examples/ExRowStatus.vue?raw'
 
     import ExCustomHeaders from './examples/ExCustomHeaders'
-    import ExCustomHeadersCode from '!!raw-loader!./examples/ExCustomHeaders'
+    import ExCustomHeadersCode from './examples/ExCustomHeaders.vue?raw'
 
     import ExSubheadings from './examples/ExSubheadings'
-    import ExSubheadingsCode from '!!raw-loader!./examples/ExSubheadings'
+    import ExSubheadingsCode from './examples/ExSubheadings.vue?raw'
 
     import ExSticky from './examples/ExSticky'
-    import ExStickyCode from '!!raw-loader!./examples/ExSticky'
+    import ExStickyCode from './examples/ExSticky.vue?raw'
 
     import ExToggleColumns from './examples/ExToggleColumns'
-    import ExToggleColumnsCode from '!!raw-loader!./examples/ExToggleColumns'
+    import ExToggleColumnsCode from './examples/ExToggleColumns.vue?raw'
 
     import ExFooter from './examples/ExFooter'
-    import ExFooterCode from '!!raw-loader!./examples/ExFooter'
+    import ExFooterCode from './examples/ExFooter.vue?raw'
 
     import ExAsyncData from './examples/ExAsyncData'
-    import ExAsyncDataCode from '!!raw-loader!./examples/ExAsyncData'
+    import ExAsyncDataCode from './examples/ExAsyncData.vue?raw'
 
     import ExDraggableRows from './examples/ExDraggableRows'
-    import ExDraggableRowsCode from '!!raw-loader!./examples/ExDraggableRows'
+    import ExDraggableRowsCode from './examples/ExDraggableRows.vue?raw'
 
     export default {
         data() {

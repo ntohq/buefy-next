@@ -27,22 +27,22 @@
     import variables from './variables/button'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypesStates from './examples/ExTypesStates'
-    import ExTypesStatesCode from '!!raw-loader!./examples/ExTypesStates'
+    import ExTypesStatesCode from './examples/ExTypesStates.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExTags from './examples/ExTags'
-    import ExTagsCode from '!!raw-loader!./examples/ExTags'
+    import ExTagsCode from './examples/ExTags.vue?raw'
 
     import ExRouter from './examples/ExRouter'
-    import ExRouterCode from '!!raw-loader!./examples/ExRouter'
+    import ExRouterCode from './examples/ExRouter.vue?raw'
 
     export default {
         data() {

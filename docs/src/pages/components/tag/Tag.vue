@@ -29,25 +29,25 @@
     import api from './api/tag'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExIcon from './examples/ExIcon'
-    import ExIconCode from '!!raw-loader!./examples/ExIcon'
+    import ExIconCode from './examples/ExIcon.vue?raw'
 
     import ExClosable from './examples/ExClosable'
-    import ExClosableCode from '!!raw-loader!./examples/ExClosable'
+    import ExClosableCode from './examples/ExClosable.vue?raw'
 
     import ExTaglist from './examples/ExTaglist'
-    import ExTaglistCode from '!!raw-loader!./examples/ExTaglist'
+    import ExTaglistCode from './examples/ExTaglist.vue?raw'
 
     import ExTaglistAttached from './examples/ExTaglistAttached'
-    import ExTaglistAttachedCode from '!!raw-loader!./examples/ExTaglistAttached'
+    import ExTaglistAttachedCode from './examples/ExTaglistAttached.vue?raw'
 
     import ExFieldCombine from './examples/ExFieldCombine'
-    import ExFieldCombineCode from '!!raw-loader!./examples/ExFieldCombine'
+    import ExFieldCombineCode from './examples/ExFieldCombine.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     export default {
         data() {

@@ -54,28 +54,28 @@
     import variables from './variables/autocomplete'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExObjArray from './examples/ExObjArray'
-    import ExObjArrayCode from '!!raw-loader!./examples/ExObjArray'
+    import ExObjArrayCode from './examples/ExObjArray.vue?raw'
 
     import ExHeader from './examples/ExHeader'
-    import ExHeaderCode from '!!raw-loader!./examples/ExHeader'
+    import ExHeaderCode from './examples/ExHeader.vue?raw'
 
     import ExFooter from './examples/ExFooter'
-    import ExFooterCode from '!!raw-loader!./examples/ExFooter'
+    import ExFooterCode from './examples/ExFooter.vue?raw'
 
     import ExGroups from './examples/ExGroups'
-    import ExGroupsCode from '!!raw-loader!./examples/ExGroups'
+    import ExGroupsCode from './examples/ExGroups.vue?raw'
 
     import ExCustomAsync from './examples/ExCustomAsync'
-    import ExCustomAsyncCode from '!!raw-loader!./examples/ExCustomAsync'
+    import ExCustomAsyncCode from './examples/ExCustomAsync.vue?raw'
 
     import ExInfiniteScroll from './examples/ExInfiniteScroll'
-    import ExInfiniteScrollCode from '!!raw-loader!./examples/ExInfiniteScroll'
+    import ExInfiniteScrollCode from './examples/ExInfiniteScroll.vue?raw'
     
     import ExKeepFirst from './examples/ExKeepFirst'
-    import ExKeepFirstCode from '!!raw-loader!./examples/ExKeepFirst'
+    import ExKeepFirstCode from './examples/ExKeepFirst.vue?raw'
 
     export default {
         data() {

@@ -17,10 +17,10 @@
     import variables from './variables/pagination'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExSlot from './examples/ExSlot'
-    import ExSlotCode from '!!raw-loader!./examples/ExSlot'
+    import ExSlotCode from './examples/ExSlot.vue?raw'
 
     export default {
         data() {

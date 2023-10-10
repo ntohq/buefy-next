@@ -28,19 +28,19 @@
     import variables from './variables/tooltip'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExStyles from './examples/ExStyles'
-    import ExStylesCode from '!!raw-loader!./examples/ExStyles'
+    import ExStylesCode from './examples/ExStyles.vue?raw'
 
     import ExCustom from './examples/ExCustom'
-    import ExCustomCode from '!!raw-loader!./examples/ExCustom'
+    import ExCustomCode from './examples/ExCustom.vue?raw'
 
     import ExMultilined from './examples/ExMultilined'
-    import ExMultilinedCode from '!!raw-loader!./examples/ExMultilined'
+    import ExMultilinedCode from './examples/ExMultilined.vue?raw'
 
     import ExToggle from './examples/ExToggle'
-    import ExToggleCode from '!!raw-loader!./examples/ExToggle'
+    import ExToggleCode from './examples/ExToggle.vue?raw'
 
     export default {
         data() {

@@ -24,19 +24,19 @@
     import variables from './variables/checkbox'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExArray from './examples/ExArray'
-    import ExArrayCode from '!!raw-loader!./examples/ExArray'
+    import ExArrayCode from './examples/ExArray.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExCheckboxButton from './examples/ExCheckboxButton'
-    import ExCheckboxButtonCode from '!!raw-loader!./examples/ExCheckboxButton'
+    import ExCheckboxButtonCode from './examples/ExCheckboxButton.vue?raw'
 
     export default {
         data() {

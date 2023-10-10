@@ -102,40 +102,40 @@
     import variables from './variables/field'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExObjectSyntax from './examples/ExObjectSyntax'
-    import ExObjectSyntaxCode from '!!raw-loader!./examples/ExObjectSyntax'
+    import ExObjectSyntaxCode from './examples/ExObjectSyntax.vue?raw'
 
     import ExAddons from './examples/ExAddons'
-    import ExAddonsCode from '!!raw-loader!./examples/ExAddons'
+    import ExAddonsCode from './examples/ExAddons.vue?raw'
 
     import ExGroups from './examples/ExGroups'
-    import ExGroupsCode from '!!raw-loader!./examples/ExGroups'
+    import ExGroupsCode from './examples/ExGroups.vue?raw'
 
     import ExGroupExpanded from './examples/ExGroupExpanded'
-    import ExGroupExpandedCode from '!!raw-loader!./examples/ExGroupExpanded'
+    import ExGroupExpandedCode from './examples/ExGroupExpanded.vue?raw'
 
     import ExGroupMultiline from './examples/ExGroupMultiline'
-    import ExGroupMultilineCode from '!!raw-loader!./examples/ExGroupMultiline'
+    import ExGroupMultilineCode from './examples/ExGroupMultiline.vue?raw'
 
     import ExPositions from './examples/ExPositions'
-    import ExPositionsCode from '!!raw-loader!./examples/ExPositions'
+    import ExPositionsCode from './examples/ExPositions.vue?raw'
 
     import ExCombineAddonsGroups from './examples/ExCombineAddonsGroups'
-    import ExCombineAddonsGroupsCode from '!!raw-loader!./examples/ExCombineAddonsGroups'
+    import ExCombineAddonsGroupsCode from './examples/ExCombineAddonsGroups.vue?raw'
 
     import ExHorizontal from './examples/ExHorizontal'
-    import ExHorizontalCode from '!!raw-loader!./examples/ExHorizontal'
+    import ExHorizontalCode from './examples/ExHorizontal.vue?raw'
 
     import ExCustomClass from './examples/ExCustomClass'
-    import ExCustomClassCode from '!!raw-loader!./examples/ExCustomClass'
+    import ExCustomClassCode from './examples/ExCustomClass.vue?raw'
 
     import ExLabelSlot from './examples/ExLabelSlot'
-    import ExLabelSlotCode from '!!raw-loader!./examples/ExLabelSlot'
+    import ExLabelSlotCode from './examples/ExLabelSlot.vue?raw'
 
     import ExLabelPosition from './examples/ExLabelPosition'
-    import ExLabelPositionCode from '!!raw-loader!./examples/ExLabelPosition'
+    import ExLabelPositionCode from './examples/ExLabelPosition.vue?raw'
 
     export default {
         data() {

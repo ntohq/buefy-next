@@ -37,16 +37,16 @@
     import variables from './variables/modal'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExComponent from './examples/ExComponent'
-    import ExComponentCode from '!!raw-loader!./examples/ExComponent'
+    import ExComponentCode from './examples/ExComponent.vue?raw'
 
     import ExProgrammatic from './examples/ExProgrammatic'
-    import ExProgrammaticCode from '!!raw-loader!./examples/ExProgrammatic'
+    import ExProgrammaticCode from './examples/ExProgrammatic.vue?raw'
 
     import ExFullScreen from './examples/ExFullScreen'
-    import ExFullScreenCode from '!!raw-loader!./examples/ExFullScreen'
+    import ExFullScreenCode from './examples/ExFullScreen.vue?raw'
 
     export default {
         data() {

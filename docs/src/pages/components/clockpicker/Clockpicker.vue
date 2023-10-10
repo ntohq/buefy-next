@@ -30,19 +30,19 @@
     import api from './api/clockpicker'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExNonReadonly from './examples/ExNonReadonly'
-    import ExNonReadonlyCode from '!!raw-loader!./examples/ExNonReadonly'
+    import ExNonReadonlyCode from './examples/ExNonReadonly.vue?raw'
 
     import ExRange from './examples/ExRange'
-    import ExRangeCode from '!!raw-loader!./examples/ExRange'
+    import ExRangeCode from './examples/ExRange.vue?raw'
 
     import ExFooter from './examples/ExFooter'
-    import ExFooterCode from '!!raw-loader!./examples/ExFooter'
+    import ExFooterCode from './examples/ExFooter.vue?raw'
 
     import ExColors from './examples/ExColors'
-    import ExColorsCode from '!!raw-loader!./examples/ExColors'
+    import ExColorsCode from './examples/ExColors.vue?raw'
 
     export default {
         data() {

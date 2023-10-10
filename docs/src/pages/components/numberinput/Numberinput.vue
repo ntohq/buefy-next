@@ -27,28 +27,28 @@
     import api from './api/numberinput'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExRange from './examples/ExRange'
-    import ExRangeCode from '!!raw-loader!./examples/ExRange'
+    import ExRangeCode from './examples/ExRange.vue?raw'
 
     import ExStep from './examples/ExStep'
-    import ExStepCode from '!!raw-loader!./examples/ExStep'
+    import ExStepCode from './examples/ExStep.vue?raw'
 
     import ExExpon from './examples/ExExpon'
-    import ExExponCode from '!!raw-loader!./examples/ExExpon'
+    import ExExponCode from './examples/ExExpon.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExAlignment from './examples/ExAlignment'
-    import ExAlignmentCode from '!!raw-loader!./examples/ExAlignment'
+    import ExAlignmentCode from './examples/ExAlignment.vue?raw'
 
     import ExCustomize from './examples/ExCustomize'
-    import ExCustomizeCode from '!!raw-loader!./examples/ExCustomize'
+    import ExCustomizeCode from './examples/ExCustomize.vue?raw'
 
     export default {
         data() {

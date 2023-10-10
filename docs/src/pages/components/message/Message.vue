@@ -34,28 +34,28 @@
     import variables from './variables/message'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExHeaderless from './examples/ExHeaderless'
-    import ExHeaderlessCode from '!!raw-loader!./examples/ExHeaderless'
+    import ExHeaderlessCode from './examples/ExHeaderless.vue?raw'
 
     import ExCustomHeader from './examples/ExCustomHeader'
-    import ExCustomHeaderCode from '!!raw-loader!./examples/ExCustomHeader'
+    import ExCustomHeaderCode from './examples/ExCustomHeader.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExAutoClose from './examples/ExAutoClose'
-    import ExAutoCloseCode from '!!raw-loader!./examples/ExAutoClose'
+    import ExAutoCloseCode from './examples/ExAutoClose.vue?raw'
 
     import ExAutoCloseWithProgressBar from './examples/ExAutoCloseWithProgressBar'
-    import ExAutoCloseWithProgressBarCode from '!!raw-loader!./examples/ExAutoCloseWithProgressBar'
+    import ExAutoCloseWithProgressBarCode from './examples/ExAutoCloseWithProgressBar.vue?raw'
 
     export default {
         data() {

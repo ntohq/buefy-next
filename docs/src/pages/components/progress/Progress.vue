@@ -29,25 +29,25 @@
     import variables from './variables/progress'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExNotRounded from './examples/ExNotRounded'
-    import ExNotRoundedCode from '!!raw-loader!./examples/ExNotRounded'
+    import ExNotRoundedCode from './examples/ExNotRounded.vue?raw'
 
     import ExValues from './examples/ExValues'
-    import ExValuesCode from '!!raw-loader!./examples/ExValues'
+    import ExValuesCode from './examples/ExValues.vue?raw'
 
     import ExSlot from './examples/ExSlot'
-    import ExSlotCode from '!!raw-loader!./examples/ExSlot'
+    import ExSlotCode from './examples/ExSlot.vue?raw'
 
     import ExBars from './examples/ExBars'
-    import ExBarsCode from '!!raw-loader!./examples/ExBars'
+    import ExBarsCode from './examples/ExBars.vue?raw'
 
     export default {
         data() {

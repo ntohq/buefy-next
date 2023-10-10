@@ -14,10 +14,10 @@
     import variables from './variables/rate'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExFull from './examples/ExFull'
-    import ExFullCode from '!!raw-loader!./examples/ExFull'
+    import ExFullCode from './examples/ExFull.vue?raw'
 
     export default {
         data() {

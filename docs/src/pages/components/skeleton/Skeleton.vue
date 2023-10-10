@@ -16,13 +16,13 @@
     import variables from './variables/skeleton'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExMediaTemplate from './examples/ExMediaTemplate'
-    import ExMediaTemplateCode from '!!raw-loader!./examples/ExMediaTemplate'
+    import ExMediaTemplateCode from './examples/ExMediaTemplate.vue?raw'
 
     import ExCardTemplate from './examples/ExCardTemplate'
-    import ExCardTemplateCode from '!!raw-loader!./examples/ExCardTemplate'
+    import ExCardTemplateCode from './examples/ExCardTemplate.vue?raw'
 
     export default {
         data() {

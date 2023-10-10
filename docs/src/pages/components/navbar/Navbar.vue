@@ -13,7 +13,7 @@
     import variables from './variables/navbar'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
     
     export default {
         data() {

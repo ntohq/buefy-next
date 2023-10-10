@@ -54,34 +54,34 @@
     import variables from './variables/taginput'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExAutocomplete from './examples/ExAutocomplete'
-    import ExAutocompleteCode from '!!raw-loader!./examples/ExAutocomplete'
+    import ExAutocompleteCode from './examples/ExAutocomplete.vue?raw'
 
     import ExTemplatedAutocomplete from './examples/ExTemplatedAutocomplete'
-    import ExTemplatedAutocompleteCode from '!!raw-loader!./examples/ExTemplatedAutocomplete'
+    import ExTemplatedAutocompleteCode from './examples/ExTemplatedAutocomplete.vue?raw'
 
     import ExSelected from './examples/ExSelected'
-    import ExSelectedCode from '!!raw-loader!./examples/ExSelected'
+    import ExSelectedCode from './examples/ExSelected.vue?raw'
 
     import ExLimit from './examples/ExLimit'
-    import ExLimitCode from '!!raw-loader!./examples/ExLimit'
+    import ExLimitCode from './examples/ExLimit.vue?raw'
 
     import ExState from './examples/ExState'
-    import ExStateCode from '!!raw-loader!./examples/ExState'
+    import ExStateCode from './examples/ExState.vue?raw'
 
     import ExType from './examples/ExType'
-    import ExTypeCode from '!!raw-loader!./examples/ExType'
+    import ExTypeCode from './examples/ExType.vue?raw'
 
     import ExSize from './examples/ExSize'
-    import ExSizeCode from '!!raw-loader!./examples/ExSize'
+    import ExSizeCode from './examples/ExSize.vue?raw'
 
     import ExModifier from './examples/ExModifier'
-    import ExModifierCode from '!!raw-loader!./examples/ExModifier'
+    import ExModifierCode from './examples/ExModifier.vue?raw'
 
     import ExValidation from './examples/ExValidation'
-    import ExValidationCode from '!!raw-loader!./examples/ExValidation'
+    import ExValidationCode from './examples/ExValidation.vue?raw'
 
     export default {
         data() {

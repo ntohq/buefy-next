@@ -20,16 +20,16 @@
     import variables from './variables/radio'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExRadioButton from './examples/ExRadioButton'
-    import ExRadioButtonCode from '!!raw-loader!./examples/ExRadioButton'
+    import ExRadioButtonCode from './examples/ExRadioButton.vue?raw'
 
     export default {
         data() {

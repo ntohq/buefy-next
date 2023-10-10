@@ -18,16 +18,16 @@
     import variables from './variables/switch'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExStyles from './examples/ExStyles'
-    import ExStylesCode from '!!raw-loader!./examples/ExStyles'
+    import ExStylesCode from './examples/ExStyles.vue?raw'
 
     export default {
         data() {

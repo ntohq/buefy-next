@@ -18,19 +18,19 @@
     import api from './api/upload'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExDragDrop from './examples/ExDragDrop'
-    import ExDragDropCode from '!!raw-loader!./examples/ExDragDrop'
+    import ExDragDropCode from './examples/ExDragDrop.vue?raw'
 
     import ExExpanded from './examples/ExExpanded'
-    import ExExpandedCode from '!!raw-loader!./examples/ExExpanded'    
+    import ExExpandedCode from './examples/ExExpanded.vue?raw'
     
     import ExRounded from './examples/ExRounded'
-    import ExRoundedCode from '!!raw-loader!./examples/ExRounded'
+    import ExRoundedCode from './examples/ExRounded.vue?raw'
 
     import ExValidation from './examples/ExValidation'
-    import ExValidationCode from '!!raw-loader!./examples/ExValidation'
+    import ExValidationCode from './examples/ExValidation.vue?raw'
 
 
     export default {

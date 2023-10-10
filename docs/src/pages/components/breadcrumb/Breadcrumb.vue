@@ -16,13 +16,13 @@
     import variables from './variables/breadcrumb'
 
 	import ExAlignments from './examples/ExAlignments'
-    import ExAlignmentsCode from '!!raw-loader!./examples/ExAlignments'
+    import ExAlignmentsCode from './examples/ExAlignments.vue?raw'
 
     import ExSeparators from './examples/ExSeparators'
-    import ExSeparatorsCode from '!!raw-loader!./examples/ExSeparators'
+    import ExSeparatorsCode from './examples/ExSeparators.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     export default {
     

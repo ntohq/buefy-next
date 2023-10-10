@@ -40,31 +40,31 @@
     import variables from './variables/tabs'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExDynamic from './examples/ExDynamic'
-    import ExDynamicCode from '!!raw-loader!./examples/ExDynamic'
+    import ExDynamicCode from './examples/ExDynamic.vue?raw'
 
     import ExPosition from './examples/ExPosition'
-    import ExPositionCode from '!!raw-loader!./examples/ExPosition'
+    import ExPositionCode from './examples/ExPosition.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExTypes from './examples/ExTypes'
-    import ExTypesCode from '!!raw-loader!./examples/ExTypes'
+    import ExTypesCode from './examples/ExTypes.vue?raw'
 
     import ExExpanded from './examples/ExExpanded'
-    import ExExpandedCode from '!!raw-loader!./examples/ExExpanded'
+    import ExExpandedCode from './examples/ExExpanded.vue?raw'
 
     import ExCustomHeaders from './examples/ExCustomHeaders'
-    import ExCustomHeadersCode from '!!raw-loader!./examples/ExCustomHeaders'
+    import ExCustomHeadersCode from './examples/ExCustomHeaders.vue?raw'
 
     import ExVertical from './examples/ExVertical'
-    import ExVerticalCode from '!!raw-loader!./examples/ExVertical'
+    import ExVerticalCode from './examples/ExVertical.vue?raw'
 
     export default {
         data() {

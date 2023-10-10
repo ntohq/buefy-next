@@ -25,13 +25,13 @@
     import api from './api/dialog'
 
     import ExAlertDialog from './examples/ExAlertDialog'
-    import ExAlertDialogCode from '!!raw-loader!./examples/ExAlertDialog'
+    import ExAlertDialogCode from './examples/ExAlertDialog.vue?raw'
 
     import ExConfirmDialog from './examples/ExConfirmDialog'
-    import ExConfirmDialogCode from '!!raw-loader!./examples/ExConfirmDialog'
+    import ExConfirmDialogCode from './examples/ExConfirmDialog.vue?raw'
 
     import ExPromptDialog from './examples/ExPromptDialog'
-    import ExPromptDialogCode from '!!raw-loader!./examples/ExPromptDialog'
+    import ExPromptDialogCode from './examples/ExPromptDialog.vue?raw'
 
     export default {
         data() {

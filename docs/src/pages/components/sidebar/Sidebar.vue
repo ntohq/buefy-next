@@ -15,9 +15,9 @@
     import variables from './variables/sidebar'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
     import ExStatic from './examples/ExStatic'
-    import ExStaticCode from '!!raw-loader!./examples/ExStatic'
+    import ExStaticCode from './examples/ExStatic.vue?raw'
     
     export default {
         data() {

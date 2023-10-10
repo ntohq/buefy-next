@@ -30,13 +30,13 @@
     import variables from './variables/loading'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExProgrammatically from './examples/ExProgrammatically'
-    import ExProgrammaticallyCode from '!!raw-loader!./examples/ExProgrammatically'
+    import ExProgrammaticallyCode from './examples/ExProgrammatically.vue?raw'
 
     import ExTemplated from './examples/ExTemplated'
-    import ExTemplatedCode from '!!raw-loader!./examples/ExTemplated'
+    import ExTemplatedCode from './examples/ExTemplated.vue?raw'
 
     export default {
         data() {

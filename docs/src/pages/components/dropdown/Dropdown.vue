@@ -45,22 +45,22 @@
     import variables from './variables/dropdown'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExContentPosition from './examples/ExContentPosition'
-    import ExContentPositionCode from '!!raw-loader!./examples/ExContentPosition'
+    import ExContentPositionCode from './examples/ExContentPosition.vue?raw'
 
     import ExHasLinkDisabled from './examples/ExHasLinkDisabled'
-    import ExHasLinkDisabledCode from '!!raw-loader!./examples/ExHasLinkDisabled'
+    import ExHasLinkDisabledCode from './examples/ExHasLinkDisabled.vue?raw'
 
     import ExCustomize from './examples/ExCustomize'
-    import ExCustomizeCode from '!!raw-loader!./examples/ExCustomize'
+    import ExCustomizeCode from './examples/ExCustomize.vue?raw'
 
     import ExCustomizeMultiple from './examples/ExCustomizeMultiple'
-    import ExCustomizeMultipleCode from '!!raw-loader!./examples/ExCustomizeMultiple'
+    import ExCustomizeMultipleCode from './examples/ExCustomizeMultiple.vue?raw'
 
     import ExCustomizeScrollable from './examples/ExCustomizeScrollable'
-    import ExCustomizeScrollableCode from '!!raw-loader!./examples/ExCustomizeScrollable'
+    import ExCustomizeScrollableCode from './examples/ExCustomizeScrollable.vue?raw'
 
     export default {
         data() {

@@ -50,16 +50,16 @@
     import variables from './variables/icon'
 
     import ExMdi from './examples/ExMdi'
-    import ExMdiCode from '!!raw-loader!./examples/ExMdi'
+    import ExMdiCode from './examples/ExMdi.vue?raw'
 
     import ExFa from './examples/ExFa'
-    import ExFaCode from '!!raw-loader!./examples/ExFa'
+    import ExFaCode from './examples/ExFa.vue?raw'
 
     import ExObjectSyntax from './examples/ExObjectSyntax'
-    import ExObjectSyntaxCode from '!!raw-loader!./examples/ExObjectSyntax'
+    import ExObjectSyntaxCode from './examples/ExObjectSyntax.vue?raw'
 
     import ExCustom from './examples/ExCustom'
-    import ExCustomCode from '!!raw-loader!./examples/ExCustom'
+    import ExCustomCode from './examples/ExCustom.vue?raw'
 
     export default {
         data() {

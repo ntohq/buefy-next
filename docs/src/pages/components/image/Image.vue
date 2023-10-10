@@ -51,15 +51,15 @@
     import variables from './variables/image'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
     import ExWebp from './examples/ExWebp'
-    import ExWebpCode from '!!raw-loader!./examples/ExWebp'
+    import ExWebpCode from './examples/ExWebp.vue?raw'
     import ExPlaceholder from './examples/ExPlaceholder'
-    import ExPlaceholderCode from '!!raw-loader!./examples/ExPlaceholder'
+    import ExPlaceholderCode from './examples/ExPlaceholder.vue?raw'
     import ExSrcset from './examples/ExSrcset'
-    import ExSrcsetCode from '!!raw-loader!./examples/ExSrcset'
+    import ExSrcsetCode from './examples/ExSrcset.vue?raw'
     import ExError from './examples/ExError'
-    import ExErrorCode from '!!raw-loader!./examples/ExError'
+    import ExErrorCode from './examples/ExError.vue?raw'
 
     export default {
         data() {

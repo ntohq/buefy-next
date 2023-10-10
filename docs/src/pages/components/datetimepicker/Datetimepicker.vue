@@ -30,22 +30,22 @@
     import api from './api/datetimepicker'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExEditable from './examples/ExEditable'
-    import ExEditableCode from '!!raw-loader!./examples/ExEditable'
+    import ExEditableCode from './examples/ExEditable.vue?raw'
 
     import ExRange from './examples/ExRange'
-    import ExRangeCode from '!!raw-loader!./examples/ExRange'
+    import ExRangeCode from './examples/ExRange.vue?raw'
 
     import ExFooter from './examples/ExFooter'
-    import ExFooterCode from '!!raw-loader!./examples/ExFooter'
+    import ExFooterCode from './examples/ExFooter.vue?raw'
 
     import ExInline from './examples/ExInline'
-    import ExInlineCode from '!!raw-loader!./examples/ExInline'
+    import ExInlineCode from './examples/ExInline.vue?raw'
 
     import ExGranularity from './examples/ExGranularity'
-    import ExGranularityCode from '!!raw-loader!./examples/ExGranularity'
+    import ExGranularityCode from './examples/ExGranularity.vue?raw'
 
     export default {
         data() {

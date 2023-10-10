@@ -38,28 +38,28 @@
     import variables from './variables/input'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExHorizontal from './examples/ExHorizontal'
-    import ExHorizontalCode from '!!raw-loader!./examples/ExHorizontal'
+    import ExHorizontalCode from './examples/ExHorizontal.vue?raw'
 
     import ExTypesStates from './examples/ExTypesStates'
-    import ExTypesStatesCode from '!!raw-loader!./examples/ExTypesStates'
+    import ExTypesStatesCode from './examples/ExTypesStates.vue?raw'
 
     import ExIcons from './examples/ExIcons'
-    import ExIconsCode from '!!raw-loader!./examples/ExIcons'
+    import ExIconsCode from './examples/ExIcons.vue?raw'
 
     import ExValidation from './examples/ExValidation'
-    import ExValidationCode from '!!raw-loader!./examples/ExValidation'
+    import ExValidationCode from './examples/ExValidation.vue?raw'
 
     import ExPassword from './examples/ExPassword'
-    import ExPasswordCode from '!!raw-loader!./examples/ExPassword'
+    import ExPasswordCode from './examples/ExPassword.vue?raw'
 
     import ExSizes from './examples/ExSizes'
-    import ExSizesCode from '!!raw-loader!./examples/ExSizes'
+    import ExSizesCode from './examples/ExSizes.vue?raw'
 
     import ExLazy from './examples/ExLazy'
-    import ExLazyCode from '!!raw-loader!./examples/ExLazy'
+    import ExLazyCode from './examples/ExLazy.vue?raw'
 
     export default {
         data() {

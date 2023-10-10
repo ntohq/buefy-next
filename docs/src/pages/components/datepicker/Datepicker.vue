@@ -90,43 +90,43 @@
     import variables from './variables/datepicker'
 
     import ExSimple from './examples/ExSimple'
-    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimpleCode from './examples/ExSimple.vue?raw'
 
     import ExEditable from './examples/ExEditable'
-    import ExEditableCode from '!!raw-loader!./examples/ExEditable'
+    import ExEditableCode from './examples/ExEditable.vue?raw'
 
     import ExRange from './examples/ExRange'
-    import ExRangeCode from '!!raw-loader!./examples/ExRange'
+    import ExRangeCode from './examples/ExRange.vue?raw'
 
     import ExFooter from './examples/ExFooter'
-    import ExFooterCode from '!!raw-loader!./examples/ExFooter'
+    import ExFooterCode from './examples/ExFooter.vue?raw'
 
     import ExHeader from './examples/ExHeader'
-    import ExHeaderCode from '!!raw-loader!./examples/ExHeader'
+    import ExHeaderCode from './examples/ExHeader.vue?raw'
 
     import ExProgrammatically from './examples/ExProgrammatically'
-    import ExProgrammaticallyCode from '!!raw-loader!./examples/ExProgrammatically'
+    import ExProgrammaticallyCode from './examples/ExProgrammatically.vue?raw'
 
     import ExTrigger from './examples/ExTrigger'
-    import ExTriggerCode from '!!raw-loader!./examples/ExTrigger'
+    import ExTriggerCode from './examples/ExTrigger.vue?raw'
 
     import ExMonth from './examples/ExMonth'
-    import ExMonthCode from '!!raw-loader!./examples/ExMonth'
+    import ExMonthCode from './examples/ExMonth.vue?raw'
 
     import ExInline from './examples/ExInline'
-    import ExInlineCode from '!!raw-loader!./examples/ExInline'
+    import ExInlineCode from './examples/ExInline.vue?raw'
 
     import ExUnselectable from './examples/ExUnselectable'
-    import ExUnselectableCode from '!!raw-loader!./examples/ExUnselectable'
+    import ExUnselectableCode from './examples/ExUnselectable.vue?raw'
 
     import ExEvents from './examples/ExEvents'
-    import ExEventsCode from '!!raw-loader!./examples/ExEvents'
+    import ExEventsCode from './examples/ExEvents.vue?raw'
 
     import ExRangeInput from './examples/ExRangeInput'
-    import ExRangeInputCode from '!!raw-loader!./examples/ExRangeInput'
+    import ExRangeInputCode from './examples/ExRangeInput.vue?raw'
 
     import ExMultipleInput from './examples/ExMultipleInput'
-    import ExMultipleInputCode from '!!raw-loader!./examples/ExMultipleInput'
+    import ExMultipleInputCode from './examples/ExMultipleInput.vue?raw'
 
     export default {
         data() {
