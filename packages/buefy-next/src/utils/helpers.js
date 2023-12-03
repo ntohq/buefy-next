@@ -362,4 +362,8 @@ export function copyAppContext(src, dest) {
     destContext.optionsCache = srcContext.optionsCache
     destContext.propsCache = srcContext.propsCache
     destContext.emitsCache = srcContext.emitsCache
+    // vue-i18n support: https://github.com/ntohq/buefy-next/issues/153
+    if ('__VUE_I18N_SYMBOL__' in src) {
+        dest.__VUE_I18N_SYMBOL__ = src.__VUE_I18N_SYMBOL__
+    }
 }
