@@ -15,7 +15,7 @@
         </template>
         <slot v-else name="label" />
     </p>
-    <ul class="menu-list" :role="ariaRole === 'menu' ? props.ariaRole : undefined">
+    <ul class="menu-list" :role="ariaRole === 'menu' ? ariaRole : undefined">
         <slot />
     </ul>
 </template>
