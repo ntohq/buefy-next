@@ -104,7 +104,7 @@ export default {
         // if true, `class`, `style`, and `id` are applied to the root <div>
         compatFallthrough: {
             type: Boolean,
-            default: () => config.defaultInputCompatFallthrough
+            default: () => config.defaultCompatFallthrough
         }
     },
     emits: [

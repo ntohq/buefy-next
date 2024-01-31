@@ -36,10 +36,11 @@ let config = {
     defaultNoticeQueue: true,
     defaultInputHasCounter: true,
     /**
-     * Whether `class`, `style`, and `id` are applied to the root `<div>`
-     * element in `Input` by default.
+     * Whether `class`, `style`, and `id` are applied to the root element in
+     * components that are affected by Vue 3 change in fallthgourh beahvior.
+     * See: https://github.com/ntohq/buefy-next/issues/16
      */
-    defaultInputCompatFallthrough: true,
+    defaultCompatFallthrough: true,
     defaultTaginputHasCounter: true,
     defaultUseHtml5Validation: true,
     defaultDropdownMobileModal: true,
