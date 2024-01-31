@@ -35,6 +35,11 @@ let config = {
     defaultTimepickerMobileModal: true,
     defaultNoticeQueue: true,
     defaultInputHasCounter: true,
+    /**
+     * Whether `class`, `style`, and `id` are applied to the root `<div>`
+     * element in `Input` by default.
+     */
+    defaultInputCompatFallthrough: true,
     defaultTaginputHasCounter: true,
     defaultUseHtml5Validation: true,
     defaultDropdownMobileModal: true,
