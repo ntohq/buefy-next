@@ -1,15 +1,16 @@
 import { shallowMount } from '@vue/test-utils'
 import CheckRadioMixin from '@utils/CheckRadioMixin'
 
-let wrapper
-
 describe('CheckRadioMixin', () => {
     HTMLElement.prototype.insertAdjacentElement = jest.fn()
+
+    const component = {
+        template: '<div class="b-component"></div>',
+        mixins: [CheckRadioMixin]
+    }
+    let wrapper
+
     beforeEach(() => {
-        const component = {
-            template: '<div class="b-component"></div>',
-            mixins: [CheckRadioMixin]
-        }
         wrapper = shallowMount(component, {
             attachTo: document.body
         })
