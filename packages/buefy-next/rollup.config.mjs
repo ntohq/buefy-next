@@ -51,7 +51,6 @@ const JS_COMPONENTS = [
     'table',
     'tabs',
     'tag',
-    'taginput',
     'timepicker',
     'upload',
 ]
