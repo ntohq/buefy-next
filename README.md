@@ -115,36 +115,60 @@ If you want to customize the icons or the theme, refer to the [customization sec
 ```
 
 
-### Installing Developer Snapshots from GitHub npm Registry to Access the Latest Features
+### Installing Developer Release(s) from GitHub npm Registry to Access the Latest Features
 To incorporate the latest changes from the development branch of buefy-next, you can install developer snapshots from the GitHub npm registry. However, proceed with caution as these packages may be deleted or retracted without notice.
 
 Steps:
 1. Generate a Personal Access Token:
-    - Create a personal access token on GitHub with read access to the GitHub Packages registry.
+    Create a personal access token on GitHub with read access to the GitHub Packages registry.
 
 2. Configure npm:
-    - In your terminal, execute the following commands:
-```bash
-npm login --auth-type=legacy --registry=https://npm.pkg.github.com
- USERNAME: <their GitHub username>
- PASSWORD: <personal access token issued at Step 1>
-echo "@ntohq:registry=https://npm.pkg.github.com" > .npmrc
-```
+
+   In your terminal, execute the following commands:
+
+    ```bash
+    npm login --auth-type=legacy --registry=https://npm.pkg.github.com
+     USERNAME: <their GitHub username>
+     PASSWORD: <personal access token issued at Step 1>
+    echo "@ntohq:registry=https://npm.pkg.github.com" > .npmrc
+    ```
+
 3. Select a Developer Release:
-    - Visit the Buefy-next package registry: https://github.com/ntohq/buefy-next/pkgs/npm/buefy-next on GitHub.
-Choose a stable developer release that suits your needs.
+    Visit the Buefy-next package registry: https://github.com/ntohq/buefy-next/pkgs/npm/buefy-next on GitHub.
+
+    Choose any developer release that suits your needs.
+        - Consider the features and bug fixes introduced in each release.
+        - Choose a more recent release if you need the latest features, but be aware of potential instabilities.
+        - Opt for a slightly older release if stability is a higher priority.
+
+    **Package Naming Conventions:**
+
+    Buefy-next developer releases follow a specific naming format:
+
+    ```
+    @ntohq/buefy-next@<package version>-<dev commit hash>
+    ```
+
+    `<package version>`: This represents the intended stable release version that the developer release will eventually be included in.
+
+    `<dev commit hash>`: This part indicates that it's a developer release and includes a unique commit hash that identifies the specific code changes in that release.
+
 
 4. Install the Package:
-    - Copy the provided command from GitHub, which will resemble this:
-```bash
-npm install @ntohq/buefy-next@<package version>-<dev commit hash>
-```
 
-Alternatively, to fetch the latest release from the developer snapshot registry, run:
-```bash
-npm install @ntohq/buefy-next@latest
-```
-**However, note it is not recommended to use the latest version of our developer snapshot, as its stability fluctuates.**
+   Copy the provided command from GitHub, which will resemble this:
+
+    ```bash
+    npm install @ntohq/buefy-next@<package version>-<dev commit hash>
+    ```
+
+   Alternatively, to fetch the latest release from the developer snapshot registry, run:
+
+    ```bash
+    npm install @ntohq/buefy-next@latest
+    ```
+
+   **However, note it is not recommended to use the latest version of our developer snapshot, as its stability fluctuates.**
 
 Congratulations! You've successfully installed a Buefy-next developer package.
 
