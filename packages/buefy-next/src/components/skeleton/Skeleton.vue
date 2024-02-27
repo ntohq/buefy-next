@@ -1,8 +1,8 @@
 <script>
-import { createCommentVNode, h as createElement } from 'vue'
+import { h as createElement } from 'vue'
 
 const BSkeleton = (props) => {
-    if (!props.active) return createCommentVNode()
+    if (!props.active) return
     const items = []
     const width = props.width
     const height = props.height
