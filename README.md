@@ -116,11 +116,12 @@ If you want to customize the icons or the theme, refer to the [customization sec
 
 
 ### Installing Developer Release(s) from GitHub npm Registry to Access the Latest Features
-To incorporate the latest changes from the development branch of buefy-next, you can install developer snapshots from the GitHub npm registry. However, proceed with caution as these packages may be deleted or retracted without notice.
+To incorporate the latest changes from the development branch of buefy-next, you can install developer releases from the GitHub npm registry. However, proceed with caution as these packages may be deleted or retracted without notice.
 
 Steps:
 1. Generate a Personal Access Token:
-    Create a personal access token on GitHub with read access to the GitHub Packages registry.
+
+   Create a personal access token on GitHub with read access to the GitHub Packages registry.
 
 2. Configure npm:
 
@@ -134,24 +135,25 @@ Steps:
     ```
 
 3. Select a Developer Release:
-    Visit the Buefy-next package registry: https://github.com/ntohq/buefy-next/pkgs/npm/buefy-next on GitHub.
 
-    Choose any developer release that suits your needs.
-        - Consider the features and bug fixes introduced in each release.
-        - Choose a more recent release if you need the latest features, but be aware of potential instabilities.
-        - Opt for a slightly older release if stability is a higher priority.
+   Visit the Buefy-next package registry: https://github.com/ntohq/buefy-next/pkgs/npm/buefy-next on GitHub.
 
-    **Package Naming Conventions:**
+   Choose any developer release that suits your needs.
+   - Consider the features and bug fixes introduced in each release.
+   - Choose a more recent release if you need the latest features, but be aware of potential instabilities.
+   - Opt for a slightly older release if stability is a higher priority.
 
-    Buefy-next developer releases follow a specific naming format:
+   **Package Naming Conventions:**
+
+   Buefy-next developer releases follow a specific naming format:
 
     ```
     @ntohq/buefy-next@<package version>-<dev commit hash>
     ```
 
-    `<package version>`: This represents the intended stable release version that the developer release will eventually be included in.
+   `<package version>`: This represents the intended stable release version that the developer release will eventually be included in.
 
-    `<dev commit hash>`: This part indicates that it's a developer release and includes a unique commit hash that identifies the specific code changes in that release.
+   `<dev commit hash>`: This part indicates that it's a developer release and includes a unique commit hash that identifies the specific code changes in that release.
 
 
 4. Install the Package:
