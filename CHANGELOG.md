@@ -4,13 +4,13 @@
 
 ### New features
 
-* `Autocomplete` introduces a new prop `compat-fallthrough`, which determines whether `class`, `style`, and `id` attributes are applied to the root `<div>` element or the underlying `<b-input>`.
+* `Autocomplete` introduces a new prop `compat-fallthrough`, which determines whether the `class`, `style`, and `id` attributes are applied to the root `<div>` element or the underlying `<b-input>`.
   If `true`, they are applied to the root `<div>` element, which is compatible with Buefy for Vue 2.
-  The default value can be controlled by `defaultCompatFallthrough` config option (`true` by default).
+  The default value can be controlled by the `defaultCompatFallthrough` config option (`true` by default).
   [#16](https://github.com/ntohq/buefy-next/issues/16)
-* `Input` introduces a new prop `compat-fallthrough`, which determines whether `class`, `style`, and `id` attributes are applied to the root `<div>`, or either of `<input>` or `<textarea>` element.
+* `Input` introduces a new prop `compat-fallthrough`, which determines whether the `class`, `style`, and `id` attributes are applied to the root `<div>`, or either of `<input>` or `<textarea>` element.
   If `true`, they are applied to the root `<div>` element, which is compatible with Buefy for Vue 2.
-  The default value can be controlled by `defaultCompatFallthrough` config option (`true` by default).
+  The default value can be controlled by the `defaultCompatFallthrough` config option (`true` by default).
   [#16](https://github.com/ntohq/buefy-next/issues/16)
 
 ## buefy-next
