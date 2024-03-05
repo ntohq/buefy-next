@@ -1,14 +1,17 @@
+import { defineComponent } from 'vue'
 import { shallowMount } from '@vue/test-utils'
+import type { VueWrapper } from '@vue/test-utils'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import MessageMixin from '@utils/MessageMixin'
 
 describe('MessageMixin', () => {
-    HTMLElement.prototype.insertAdjacentElement = jest.fn()
+    HTMLElement.prototype.insertAdjacentElement = vi.fn()
 
-    const component = {
-        template: '<div class="b-component"></div>',
-        mixins: [MessageMixin]
-    }
-    let wrapper
+    const component = defineComponent({
+        mixins: [MessageMixin],
+        template: '<div class="b-component"></div>'
+    })
+    let wrapper: VueWrapper<InstanceType<typeof component>>
 
     beforeEach(() => {
         wrapper = shallowMount(component, {
