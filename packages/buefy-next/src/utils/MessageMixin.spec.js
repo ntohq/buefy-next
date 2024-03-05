@@ -1,15 +1,16 @@
 import { shallowMount } from '@vue/test-utils'
 import MessageMixin from '@utils/MessageMixin'
 
-let wrapper
-
 describe('MessageMixin', () => {
     HTMLElement.prototype.insertAdjacentElement = jest.fn()
+
+    const component = {
+        template: '<div class="b-component"></div>',
+        mixins: [MessageMixin]
+    }
+    let wrapper
+
     beforeEach(() => {
-        const component = {
-            template: '<div class="b-component"></div>',
-            mixins: [MessageMixin]
-        }
         wrapper = shallowMount(component, {
             attachTo: document.body
         })
