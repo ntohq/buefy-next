@@ -230,7 +230,6 @@ export default {
             return this.repeat || this.activeChild < this.childItems.length - 1
         },
 
-        // internal index of the active child
         activeChildIndex() {
             const item = this.sortedItems[this.activeChild]
             return item != null ? item.index : undefined
