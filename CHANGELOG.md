@@ -8,9 +8,9 @@
   If `true`, they are applied to the root `<div>` element, which is compatible with Vue 2.
   The default value can be controlled by `defaultCompatFallthrough` config option (`true` by default).
   [#16](https://github.com/ntohq/buefy-next/issues/16)
-* `CarouselItem`, `StepItem`, and `TabItem` introduce a new prop `order`, which determine the ordering of items.
-  By default, the order is determined according to when items are mounted in sequence.
-  If any item is unmounted and mounted again, the order may be changed (**BREAKING CHANGE**).
+* `CarouselItem`, `StepItem`, and `TabItem` introduce a new prop `order`, which determines the order of each tab item.
+  By default, the order of each tab item is determined by the sequence in which each tab item is mounted.
+  If any tab item is unmounted and mounted again, the order may be changed (**BREAKING CHANGE**).
   You have to give explicit `order` if you want to maintain the order of items consistent.
 
 ## buefy-next
