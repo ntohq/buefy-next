@@ -76,7 +76,8 @@ describe('BTabItem', () => {
 
     it('should update active state', async () => {
         const wrapperFirstItem = wrapperParent.findComponent({ ref: 'firstItem' })
-        // we need `<a>` elements corresponding to individual tabs
+        // we need `<a>` elements corresponding to individual tab components to
+        // activate them with 'click'
         const firstTabLink = wrapperParent.find(`#${wrapperFirstItem.vm.uniqueValue}-label`)
         const secondTabLink = wrapperParent.find(`#${wrapper.vm.uniqueValue}-label`)
 
