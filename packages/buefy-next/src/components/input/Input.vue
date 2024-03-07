@@ -231,7 +231,7 @@ export default {
         * Current password-reveal icon name.
         */
         passwordVisibleIcon() {
-            return !this.isPasswordVisible ? 'eye' : 'eye-off'
+            return !this.isPasswordVisible ? 'eye-off' : 'eye'
         },
         /**
         * Get value length
