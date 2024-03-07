@@ -18,9 +18,10 @@ export default (parentItemName, flags = 0) => {
             }
         },
         computed: {
-            // parent uses this to identify the child in a collection.
-            // bound to `value` if `value` is non-null,
-            // otherwise to `uid` internal field
+            // `ProviderParentMixin` uses `uniqueValue` computed value to
+            // identify the child in its `childItems` collection.
+            // so the value must be unique among all the siblings.
+            // falls back to the `uid` internal field to ensure uniqueness.
             uniqueValue() {
                 return this.value != null ? this.value : this.$.uid
             }
