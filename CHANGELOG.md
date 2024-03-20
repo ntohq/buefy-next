@@ -13,9 +13,57 @@
 
     If `compat-fallthrough` is `true`, the attributes fall through to the root `<div>` element, otherwise to the underlying `<b-input>`.
 
+  * `BreadcrumbItem`:
+
+    TBD
+
+  * `Clockpicker`:
+
+    TBD
+
+  * `Datepicker`:
+
+    TBD
+
   * `Input`:
 
     If `compat-fallthrough` is `true`, the attributes fall through to the root `<div>` element, otherwise to either of `<input>` or `<textarea>` element.
+
+  * `MenuItem`:
+
+    TBD
+
+  * `NavbarDropdown`:
+
+    TBD
+
+  * `Numberinput`:
+
+    TBD
+
+  * `Select`:
+
+    TBD
+
+  * `SliderThumb`:
+
+    TBD
+
+  * `Table`:
+
+    TBD
+
+  * `Taginput`:
+
+    TBD
+
+  * `Timepicker`:
+
+    TBD
+
+  * `Upload`:
+
+    TBD
 
 * `CarouselItem`, `StepItem`, and `TabItem` introduce a new prop `order`, which determines the order of each child item.
   By default, the order of each child item is determined by the sequence in which each child item is mounted.
