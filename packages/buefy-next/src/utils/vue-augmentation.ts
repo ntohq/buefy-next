@@ -7,6 +7,7 @@
 // otherwise the post processing will be messed up.
 import 'vue'
 
+import type { SnackbarProgrammatic } from '../components/snackbar'
 import ConfigComponent from './ConfigComponent'
 
 // Augments the global property with `$buefy`.
@@ -18,6 +19,7 @@ declare module '@vue/runtime-core' {
         $buefy: {
             config: typeof ConfigComponent,
             globalNoticeInterval?: ReturnType<typeof setTimeout>,
+            snackbar: SnackbarProgrammatic,
             // TODO: make key-values more specific
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             [key: string]: any
