@@ -61,7 +61,6 @@ const JS_COMPONENTS = [
     'sidebar',
     'skeleton',
     'slider',
-    'snackbar',
     'steps',
     'switch',
     'table',
