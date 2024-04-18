@@ -5,7 +5,7 @@
         ref="label"
         :disabled="disabledOrUndefined"
         @click="focus"
-        @keydown.prevent.enter="$refs.label.click()"
+        @keydown.prevent.enter="($refs.label as HTMLElement).click() "
         @mousedown="isMouseDown = true"
         @mouseup="isMouseDown = false"
         @mouseout="isMouseDown = false"
@@ -38,10 +38,12 @@
     </label>
 </template>
 
-<script>
+<script lang="ts">
 import config from '../../utils/config'
+import { defineComponent } from 'vue'
+import type { ExtractComponentProps } from '../../utils/helpers'
 
-export default {
+const Switch =  defineComponent({
     name: 'BSwitch',
     props: {
         modelValue: [String, Number, Boolean, Function, Object, Array, Date],
@@ -88,7 +90,8 @@ export default {
             get() {
                 return this.newValue
             },
-            set(value) {
+            /*String, Number, Boolean, Function, Object, Array, Date*/
+            set(value: string|boolean|Function|object|Array<string|boolean|Function|object|Date>|Date) {
                 this.newValue = value
                 this.$emit('update:modelValue', value)
             }
@@ -132,8 +135,12 @@ export default {
     methods: {
         focus() {
             // MacOS FireFox and Safari do not focus when clicked
-            this.$refs.input.focus()
+            (this.$refs.input as HTMLElement).focus()
         }
     }
-}
+})
+
+export type SwitchProps = ExtractComponentProps<typeof Switch>
+
+export default Switch
 </script>
