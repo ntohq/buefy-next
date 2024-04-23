@@ -4,7 +4,7 @@ import Dialog from './Dialog.vue'
 
 import config from '../../utils/config'
 import { merge, copyAppContext, getComponentFromVNode } from '../../utils/helpers'
-import { use, registerComponent, registerComponentProgrammatic } from '../../utils/plugins'
+import { registerComponent, registerComponentProgrammatic } from '../../utils/plugins'
 
 function open(propsData, app) {
     let slot

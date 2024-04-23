@@ -5,7 +5,7 @@ import NotificationNotice from './NotificationNotice.vue'
 
 import config from '../../utils/config'
 import { merge, copyAppContext, getComponentFromVNode } from '../../utils/helpers'
-import { use, registerComponent, registerComponentProgrammatic } from '../../utils/plugins'
+import { registerComponent, registerComponentProgrammatic } from '../../utils/plugins'
 
 class NotificationProgrammatic {
     constructor(app) {

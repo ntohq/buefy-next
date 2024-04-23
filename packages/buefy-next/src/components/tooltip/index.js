@@ -1,6 +1,6 @@
 import Tooltip from './Tooltip.vue'
 
-import { use, registerComponent } from '../../utils/plugins'
+import { registerComponent } from '../../utils/plugins'
 
 const Plugin = {
     install(Vue) {

@@ -1,7 +1,7 @@
 import Radio from './Radio.vue'
 import RadioButton from './RadioButton.vue'
 
-import { use, registerComponent } from '../../utils/plugins'
+import { registerComponent } from '../../utils/plugins'
 
 const Plugin = {
     install(Vue) {

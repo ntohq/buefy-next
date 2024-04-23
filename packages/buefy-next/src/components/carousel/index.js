@@ -2,7 +2,7 @@ import Carousel from './Carousel.vue'
 import CarouselItem from './CarouselItem.vue'
 import CarouselList from './CarouselList.vue'
 
-import { use, registerComponent } from '../../utils/plugins'
+import { registerComponent } from '../../utils/plugins'
 
 const Plugin = {
     install(Vue) {

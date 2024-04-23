@@ -1,7 +1,7 @@
 import Table from './Table.vue'
 import TableColumn from './TableColumn.vue'
 
-import { use, registerComponent } from '../../utils/plugins'
+import { registerComponent } from '../../utils/plugins'
 import { VueInstance, setVueInstance } from '../../utils/config'
 
 const Plugin = {

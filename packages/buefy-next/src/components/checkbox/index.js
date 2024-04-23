@@ -1,7 +1,7 @@
 import Checkbox from './Checkbox.vue'
 import CheckboxButton from './CheckboxButton.vue'
 
-import { use, registerComponent } from '../../utils/plugins'
+import { registerComponent } from '../../utils/plugins'
 
 const Plugin = {
     install(Vue) {
