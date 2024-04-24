@@ -43,7 +43,7 @@ import config from '../../utils/config'
 import { defineComponent } from 'vue'
 import type { ExtractComponentProps } from '../../utils/helpers'
 
-const Switch =  defineComponent({
+const Switch = defineComponent({
     name: 'BSwitch',
     props: {
         modelValue: [String, Number, Boolean, Function, Object, Array, Date],
@@ -90,8 +90,8 @@ const Switch =  defineComponent({
             get() {
                 return this.newValue
             },
-            /*String, Number, Boolean, Function, Object, Array, Date*/
-            set(value: string|boolean|Function|object|Array<string|boolean|Function|object|Date>|Date) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            set(value: any) {
                 this.newValue = value
                 this.$emit('update:modelValue', value)
             }
