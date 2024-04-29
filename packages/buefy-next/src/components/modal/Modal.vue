@@ -70,7 +70,9 @@ export default {
         props: Object,
         events: {
             type: Object,
-            default: {}
+            default() {
+                return {}
+            }
         },
         width: {
             type: [String, Number],
