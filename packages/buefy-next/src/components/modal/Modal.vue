@@ -68,7 +68,10 @@ export default {
         content: [String, Array],
         programmatic: Boolean,
         props: Object,
-        events: Object,
+        events: {
+            type: Object,
+            default: {}
+        },
         width: {
             type: [String, Number],
             default: 960
