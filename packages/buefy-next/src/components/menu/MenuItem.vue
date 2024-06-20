@@ -55,9 +55,9 @@ export default {
         }
     },
     // deprecated, to replace with default 'value' in the next breaking change
-    model: {
+    modelValue: {
         prop: 'active',
-        event: 'update:active'
+        event: 'update:modelValue'
     },
     props: {
         label: String,
@@ -86,7 +86,7 @@ export default {
             default: 'is-small'
         }
     },
-    emits: ['update:active', 'update:expanded'],
+    emits: ['update:modelValue', 'update:expanded'],
     data() {
         return {
             newActive: this.active,
