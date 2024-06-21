@@ -160,6 +160,10 @@ export default {
                     )
             }
         },
+        mobileNative: {
+            type: Boolean,
+            default: true
+        },
         representation: {
             type: String,
             default: 'triangle',
