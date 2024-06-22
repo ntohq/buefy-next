@@ -164,7 +164,7 @@ export default {
         },
         mobileNative: {
             type: Boolean,
-            default: true
+            default: false
         },
         representation: {
             type: String,
