@@ -22,7 +22,7 @@
                 v-else
                 name="label"
                 :expanded="newExpanded"
-                :active="newActive"
+                :modelValue="newActive"
             />
         </component>
         <!-- sub menu items -->
@@ -55,13 +55,9 @@ export default {
         }
     },
     // deprecated, to replace with default 'value' in the next breaking change
-    modelValue: {
-        prop: 'active',
-        event: 'update:modelValue'
-    },
     props: {
         label: String,
-        active: Boolean,
+        modelValue: Boolean,
         expanded: Boolean,
         disabled: Boolean,
         iconPack: String,
@@ -89,7 +85,7 @@ export default {
     emits: ['update:modelValue', 'update:expanded'],
     data() {
         return {
-            newActive: this.active,
+            newActive: this.modelValue,
             newExpanded: this.expanded
         }
     },
@@ -99,7 +95,7 @@ export default {
         }
     },
     watch: {
-        active(value) {
+        modelValue(value) {
             this.newActive = value
         },
         expanded(value) {
@@ -115,7 +111,7 @@ export default {
             this.$emit('update:expanded', this.newExpanded)
             if (menu && menu.activable) {
                 this.newActive = true
-                this.$emit('update:active', this.newActive)
+                this.$emit('update:modelValue', this.newActive)
             }
         },
         reset(parent, menu) {
@@ -131,7 +127,7 @@ export default {
                     }
                     if (menu && menu.activable) {
                         item.newActive = false
-                        item.$emit('update:active', item.newActive)
+                        item.$emit('update:modelValue', item.newActive)
                     }
                 }
             })
