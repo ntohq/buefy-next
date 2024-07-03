@@ -22,7 +22,7 @@
                 v-else
                 name="label"
                 :expanded="newExpanded"
-                :modelValue="newActive"
+                :active="newActive"
             />
         </component>
         <!-- sub menu items -->
