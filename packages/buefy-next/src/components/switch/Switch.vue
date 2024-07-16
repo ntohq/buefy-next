@@ -40,7 +40,7 @@
 
 <script lang="ts">
 import config from '../../utils/config'
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import type { ExtractComponentProps } from '../../utils/helpers'
 
 const Switch = defineComponent({
@@ -49,8 +49,8 @@ const Switch = defineComponent({
         modelValue: [String, Number, Boolean, Function, Object, Array, Date],
         nativeValue: [String, Number, Boolean, Function, Object, Array, Date],
         disabled: Boolean,
-        type: String,
-        passiveType: String,
+        type: String as PropType<String | null>,
+        passiveType: String as PropType<String | null>,
         name: String,
         required: Boolean,
         size: String,

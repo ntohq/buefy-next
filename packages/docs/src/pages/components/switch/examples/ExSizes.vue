@@ -16,13 +16,7 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue'
     import { BField, BSwitch } from '@ntohq/buefy-next'
 
-    export default defineComponent({
-        components: {
-            BField,
-            BSwitch
-        }
-    })
+    export default {}
 </script>
