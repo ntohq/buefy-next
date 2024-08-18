@@ -227,7 +227,7 @@ export function createAbsoluteElement(el: Element): Element {
     return root
 }
 
-export function isVueComponent(c: unknown) {
+export function isVueComponent(c: unknown): c is ComponentPublicInstance {
     return c != null &&
         (c as ComponentPublicInstance).$ != null &&
         (c as ComponentPublicInstance).$.vnode != null
