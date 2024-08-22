@@ -39,23 +39,24 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import type { PropType } from 'vue';
 import type { ExtractComponentProps } from '../../utils/helpers'
+import CompatFallthroughMixin from '../../utils/CompatFallthroughMixin'
 import FormElementMixin from '../../utils/FormElementMixin'
 import { File } from '../../utils/ssr'
 
 interface BUploadData {
-    newValue: [Object, Function, File, Array<T>, null],
-    dragDropFocus: boolean,
-    _elementRef: string,
+    newValue: File | Array<File> | null;
+    dragDropFocus: boolean;
+    _elementRef: string;
 }
-
 
 const Upload = defineComponent({
     name: 'BUpload',
     mixins: [CompatFallthroughMixin, FormElementMixin],
     props: {
         modelValue: {
-            type: [Object, Function, File, Array]
+            type: [File, Array] as PropType<File | Array<File> | null>
         },
         multiple: Boolean,
         disabled: Boolean,
@@ -81,7 +82,7 @@ const Upload = defineComponent({
     emits: ['invalid', 'update:modelValue'],
     data(): BUploadData {
         return {
-            newValue: this.modelValue,
+            newValue: this.modelValue ?? null,
             dragDropFocus: false,
             _elementRef: 'input'
         }
@@ -104,7 +105,10 @@ const Upload = defineComponent({
         onFileChange(event: Event) {
             if (this.disabled || this.loading) return
             if (this.dragDrop) this.updateDragDropFocus(false)
-            const value = event.target.files || (event as DragEvent).dataTransfer!.files
+            const value = (event.target as HTMLInputElement)?.files
+                            ?? (event as DragEvent).dataTransfer?.files
+                            ?? [];
+
             if (value.length === 0) {
                 if (!this.newValue) return
                 if (this.native) this.newValue = null
@@ -133,7 +137,7 @@ const Upload = defineComponent({
                 }
                 for (let i = 0; i < value.length; i++) {
                     const file = value[i]
-                    if (this.checkType(file)) {
+                    if (this.checkType(file) && Array.isArray(this.newValue)) {
                         this.newValue.push(file)
                         newValues = true
                     }
