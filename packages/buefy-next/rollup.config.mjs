@@ -40,6 +40,7 @@ const TS_COMPONENTS = [
     'input',
     'modal',
     'notification',
+    'pagination',
     'select',
     'snackbar',
     'switch',
