@@ -15,18 +15,19 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
     import api from './api/pagination'
     import variables from './variables/pagination'
     import { shallowFields } from '@/utils'
 
-    import ExSimple from './examples/ExSimple'
+    import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
 
-    import ExSlot from './examples/ExSlot'
+    import ExSlot from './examples/ExSlot.vue'
     import ExSlotCode from './examples/ExSlot.vue?raw'
 
-    export default {
+    export default defineComponent({
         data() {
             return {
                 api,
@@ -39,5 +40,5 @@
                 ExSlotCode
             }
         }
-    }
+    })
 </script>
