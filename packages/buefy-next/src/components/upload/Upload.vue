@@ -56,7 +56,7 @@ const Upload = defineComponent({
     mixins: [CompatFallthroughMixin, FormElementMixin],
     props: {
         modelValue: {
-            type: [File, Array] as PropType<File | Array<File> | null>
+            type: [Object, Function, File, Array] as PropType<File | Array<File> | null>
         },
         multiple: Boolean,
         disabled: Boolean,
@@ -79,10 +79,15 @@ const Upload = defineComponent({
             default: false
         }
     },
-    emits: ['invalid', 'update:modelValue'],
-    data(): BUploadData {
+    emits: {
+        /* eslint-disable @typescript-eslint/no-unused-vars */
+        'invalid': (valid: boolean) => true,
+        'update:modelValue': (newValue: File | Array<File> | null) => true
+        /* eslint-enable @typescript-eslint/no-unused-vars */
+    },
+    data() {
         return {
-            newValue: this.modelValue ?? null,
+            newValue: this.modelValue,
             dragDropFocus: false,
             _elementRef: 'input'
         }
@@ -105,8 +110,8 @@ const Upload = defineComponent({
         onFileChange(event: Event) {
             if (this.disabled || this.loading) return
             if (this.dragDrop) this.updateDragDropFocus(false)
-            const value = (event.target as HTMLInputElement)?.files
-                            ?? (event as DragEvent).dataTransfer?.files
+            const value = (event.target as HTMLInputElement)!.files
+                            ?? (event as DragEvent).dataTransfer!.files
                             ?? [];
 
             if (value.length === 0) {
@@ -177,7 +182,7 @@ const Upload = defineComponent({
                     }
                 }
             }
-            if (!valid) this.$emit('invalid')
+            if (!valid) this.$emit('invalid', valid)
             return valid
         }
     }

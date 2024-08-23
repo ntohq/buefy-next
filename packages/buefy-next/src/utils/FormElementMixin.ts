@@ -186,7 +186,7 @@ const FormElementMixin = defineComponent({
             if (!this.useHtml5Validation)
                 return false
 
-            const el = this.getElement() as ConstraintValidationElement
+            const el = this.getElement()
             if (el == null)
                 return false
 
