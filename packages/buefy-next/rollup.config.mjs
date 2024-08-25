@@ -38,6 +38,7 @@ const TS_COMPONENTS = [
     'icon',
     'image',
     'input',
+    'loading',
     'modal',
     'notification',
     'pagination',
