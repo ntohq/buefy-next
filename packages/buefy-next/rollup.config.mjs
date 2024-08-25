@@ -46,7 +46,6 @@ const JS_COMPONENTS = [
     'icon',
     'image',
     'input',
-    'loading',
     'menu',
     'message',
     'modal',
