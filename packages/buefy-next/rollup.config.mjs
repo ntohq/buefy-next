@@ -42,7 +42,6 @@ const JS_COMPONENTS = [
     'select',
     'table',
     'timepicker',
-    'upload',
 ]
 
 const entries = {
