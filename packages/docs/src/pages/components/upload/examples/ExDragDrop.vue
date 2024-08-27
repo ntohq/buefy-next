@@ -34,8 +34,14 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue'
+    import { BField, BIcon, BUpload } from '@ntohq/buefy-next'
 
     export default defineComponent({
+        components: {
+            BField,
+            BIcon,
+            BUpload
+        },
         data() {
             return {
                 dropFiles: [] as Array<File>
