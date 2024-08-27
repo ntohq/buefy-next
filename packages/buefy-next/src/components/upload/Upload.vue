@@ -39,17 +39,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import type { PropType } from 'vue';
+import type { PropType } from 'vue'
 import type { ExtractComponentProps } from '../../utils/helpers'
 import CompatFallthroughMixin from '../../utils/CompatFallthroughMixin'
 import FormElementMixin from '../../utils/FormElementMixin'
 import { File } from '../../utils/ssr'
-
-interface BUploadData {
-    newValue: File | Array<File> | null;
-    dragDropFocus: boolean;
-    _elementRef: string;
-}
 
 const Upload = defineComponent({
     name: 'BUpload',
@@ -81,7 +75,7 @@ const Upload = defineComponent({
     },
     emits: {
         /* eslint-disable @typescript-eslint/no-unused-vars */
-        'invalid': (valid: boolean) => true,
+        invalid: (valid: boolean) => true,
         'update:modelValue': (newValue: File | Array<File> | null) => true
         /* eslint-enable @typescript-eslint/no-unused-vars */
     },
@@ -101,7 +95,7 @@ const Upload = defineComponent({
         modelValue(value) {
             this.newValue = value
             if (!value || (Array.isArray(value) && value.length === 0)) {
-                (this.$refs.input as HTMLInputElement).value = ""
+                (this.$refs.input as HTMLInputElement).value = ''
             }
             !this.isValid && !this.dragDrop && this.checkHtml5Validity()
         }
@@ -110,9 +104,9 @@ const Upload = defineComponent({
         onFileChange(event: Event) {
             if (this.disabled || this.loading) return
             if (this.dragDrop) this.updateDragDropFocus(false)
-            const value = (event.target as HTMLInputElement)!.files
-                            ?? (event as DragEvent).dataTransfer!.files
-                            ?? [];
+            const value = (event.target as HTMLInputElement)!.files ??
+                            (event as DragEvent).dataTransfer!.files ??
+                            []
 
             if (value.length === 0) {
                 if (!this.newValue) return
@@ -153,7 +147,7 @@ const Upload = defineComponent({
             !this.dragDrop && this.checkHtml5Validity()
         },
         clearInput() {
-            (this.$refs.input as HTMLInputElement).value = ""
+            (this.$refs.input as HTMLInputElement).value = ''
         },
         updateDragDropFocus(focus: boolean) {
             if (!this.disabled && !this.loading) {

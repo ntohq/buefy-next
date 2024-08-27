@@ -183,12 +183,14 @@ const FormElementMixin = defineComponent({
          * and error message to parent if it's a Field.
          */
         checkHtml5Validity(): boolean {
-            if (!this.useHtml5Validation)
+            if (!this.useHtml5Validation) {
                 return false
+            }
 
             const el = this.getElement()
-            if (el == null)
+            if (el == null) {
                 return false
+            }
 
             if (!el.checkValidity()) {
                 this.setInvalid()
