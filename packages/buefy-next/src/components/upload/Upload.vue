@@ -75,7 +75,7 @@ const Upload = defineComponent({
     },
     emits: {
         /* eslint-disable @typescript-eslint/no-unused-vars */
-        invalid: (valid: boolean) => true,
+        invalid: () => true,
         'update:modelValue': (newValue: File | Array<File> | null) => true
         /* eslint-enable @typescript-eslint/no-unused-vars */
     },
@@ -176,7 +176,7 @@ const Upload = defineComponent({
                     }
                 }
             }
-            if (!valid) this.$emit('invalid', valid)
+            if (!valid) this.$emit('invalid')
             return valid
         }
     }
