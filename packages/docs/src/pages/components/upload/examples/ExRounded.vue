@@ -22,18 +22,20 @@
                     {{ file2.name }}
                 </span>
             </b-upload>
-        </b-field> 
+        </b-field>
     </b-field>
   </section>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   data() {
     return {
-      file: {},
-      file2 : null
+      file: {} as File,
+      file2 : null as File | null
     };
   },
-};
+});
 </script>

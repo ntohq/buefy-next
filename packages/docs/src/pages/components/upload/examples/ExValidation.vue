@@ -12,12 +12,14 @@
     </b-field>
 </template>
 
-<script>
-    export default {
-        data() {
-            return {
-                file: null,
-            }
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    data() {
+        return {
+            file: null as File | null,
         }
     }
+});
 </script>

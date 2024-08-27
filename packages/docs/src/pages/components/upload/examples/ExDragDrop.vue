@@ -32,17 +32,19 @@
     </section>
 </template>
 
-<script>
-    export default {
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
+    export default defineComponent({
         data() {
             return {
-                dropFiles: []
+                dropFiles: [] as Array<File>
             }
         },
         methods: {
-            deleteDropFile(index) {
+            deleteDropFile(index: number): void {
                 this.dropFiles.splice(index, 1)
             }
         }
-    }
+    })
 </script>
