@@ -5,15 +5,15 @@ import type { App } from 'vue'
  *
  * @remarks
  *
- * I does not seem Vue provides a type for this.
+ * It does not seem Vue provides a type for this.
  *
- * There should be a better place to put this type.
+ * FIXME: There should be a better place to put this type into.
  *
  * @beta
  */
 export type VueClassAttribute =
-    | (string | Record<string, boolean>)
-    | (string | Record<string, boolean>)[]
+    | (string | Record<string, boolean | undefined> | null | undefined)
+    | (string | Record<string, boolean | undefined> | null | undefined)[]
 
 /**
  * Cancellable options for `Modal`.
