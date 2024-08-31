@@ -45,6 +45,7 @@ const TS_COMPONENTS = [
     'select',
     'snackbar',
     'switch',
+    'table',
     'tag',
     'taginput',
     'toast',
