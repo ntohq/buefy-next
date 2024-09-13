@@ -1,4 +1,7 @@
+import type { DefineComponent } from 'vue'
+
 import { hasFlag } from './helpers'
+import type { InjectedChild } from './ProvideInjectTypes'
 
 const items = 1
 const sorted = 3
@@ -6,8 +9,53 @@ const sorted = 3
 export const Items = items
 export const Sorted = sorted
 
-export default (itemName, flags = 0) => {
-    const mixin = {
+export type FeatureFlags = 0 | typeof Items | typeof Sorted
+
+/* eslint-disable @typescript-eslint/ban-types */
+// conditional data fields of ProviderParentMixin
+export type ProviderParentMixinData<
+    Flags extends FeatureFlags,
+    Child extends InjectedChild,
+    HasItems extends boolean = Flags extends typeof Items | typeof Sorted ? true : false,
+    IsSorted extends boolean = Flags extends typeof Sorted ? true : false
+> = (HasItems extends true ? { childItems: Child[] } : {})
+    & (IsSorted extends true ? { nextIndex: number } : {})
+
+// conditional computed fields of ProviderParentMixin
+export type ProviderParentMixinComputed<
+    Flags extends FeatureFlags,
+    Child extends InjectedChild,
+    IsSorted extends boolean = Flags extends typeof Sorted ? true : false
+> = IsSorted extends true ? { sortedItems(): Child[] } : {}
+
+// conditional methods of ProviderParentMixin
+export type ProviderParentMixinMethods<
+    Flags extends FeatureFlags,
+    Child extends InjectedChild,
+    HasItems extends boolean = Flags extends typeof Items | typeof Sorted ? true : false
+> = HasItems extends true ? {
+    _registerItem(item: Child): void
+    _unregisterItem(item: Child): void
+} : {}
+
+export type ProviderParentMixin<
+    Flags extends FeatureFlags,
+    Child extends InjectedChild
+> = DefineComponent<
+    {}, // PropsOrPropOptions
+    {}, // RawBindings
+    ProviderParentMixinData<Flags, Child>, // D(ata)
+    ProviderParentMixinComputed<Flags, Child>, // C(computed)
+    ProviderParentMixinMethods<Flags, Child> // M(ethods)
+>
+/* eslint-enable @typescript-eslint/ban-types */
+
+export default <
+    Flags extends FeatureFlags = FeatureFlags,
+    Child extends InjectedChild = InjectedChild
+>(itemName: string, flags?: Flags): ProviderParentMixin<Flags, Child> => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const mixin: any = {
         provide() {
             return {
                 ['b' + itemName]: this
@@ -15,15 +63,15 @@ export default (itemName, flags = 0) => {
         }
     }
 
-    if (hasFlag(flags, items)) {
+    if (flags !== undefined && hasFlag(flags, items)) {
         mixin.data = function () {
             return {
-                childItems: [],
+                childItems: [] as Child[],
                 ...(hasFlag(flags, sorted) ? { nextIndex: 0 } : {})
             }
         }
         mixin.methods = {
-            _registerItem(item) {
+            _registerItem(item: Child) {
                 if (hasFlag(flags, sorted)) {
                     // assigns a dynamic index.
                     // dynamic indices will be messed up if any child is
@@ -34,8 +82,9 @@ export default (itemName, flags = 0) => {
                 }
                 this.childItems.push(item)
             },
-            _unregisterItem(item) {
-                this.childItems = this.childItems.filter((i) => i.uniqueValue !== item.uniqueValue)
+            _unregisterItem(item: Child) {
+                this.childItems = this.childItems
+                    .filter((i: Child) => i.uniqueValue !== item.uniqueValue)
             }
         }
 
@@ -45,7 +94,7 @@ export default (itemName, flags = 0) => {
                  * When items are added/removed sort them according to their position
                  */
                 sortedItems() {
-                    return this.childItems.slice().sort((i1, i2) => {
+                    return this.childItems.slice().sort((i1: Child, i2: Child) => {
                         return i1.index - i2.index
                     })
                 }
