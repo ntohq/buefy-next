@@ -49,7 +49,6 @@ const JS_COMPONENTS = [
     'slider',
     'steps',
     'table',
-    'tabs',
     'tag',
     'taginput',
     'timepicker',
