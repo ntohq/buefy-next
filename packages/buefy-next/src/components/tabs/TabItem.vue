@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import TabbedChildMixin from '../../utils/TabbedChildMixin'
 
-export default {
+export default defineComponent({
     name: 'BTabItem',
     mixins: [TabbedChildMixin('tab')],
     props: {
@@ -13,5 +14,5 @@ export default {
             elementRole: 'tabpanel'
         }
     }
-}
+})
 </script>
