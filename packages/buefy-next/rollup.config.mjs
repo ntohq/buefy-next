@@ -41,7 +41,6 @@ const JS_COMPONENTS = [
     'datepicker',
     'datetimepicker',
     'dialog',
-    'dropdown',
     'field',
     'icon',
     'image',
