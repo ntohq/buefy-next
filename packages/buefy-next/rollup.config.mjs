@@ -34,6 +34,7 @@ const TS_COMPONENTS = [
     'button',
     'checkbox',
     'dialog',
+    'dropdown',
     'field',
     'icon',
     'image',
