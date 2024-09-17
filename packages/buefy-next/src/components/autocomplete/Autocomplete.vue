@@ -188,7 +188,7 @@ export default defineComponent({
         /* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
         active: (active: boolean) => true,
         blur: (event: Event) => true,
-        focus: (event: Event) => true,
+        focus: (event?: Event) => true,
         'icon-click': (event: MouseEvent) => true,
         'icon-right-click': (event: MouseEvent) => true,
         'infinite-scroll': () => true,
@@ -679,7 +679,7 @@ export default defineComponent({
          * Focus listener.
          * If value is the same as selected, select all text.
          */
-        focused(event: Event) {
+        focused(event?: Event) {
             if (this.getValue(this.selected) === this.newValue) {
                 this.$el.querySelector('input').select()
             }
