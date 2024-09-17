@@ -50,6 +50,7 @@ const TS_COMPONENTS = [
     'tabs',
     'tag',
     'taginput',
+    'timepicker',
     'toast',
     'upload'
 ]
