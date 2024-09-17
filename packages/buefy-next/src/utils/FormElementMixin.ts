@@ -37,7 +37,7 @@ const FormElementMixin = defineComponent({
         },
         validationMessage: String,
         locale: {
-            type: [String, Array],
+            type: [String, Array<string>],
             default: () => {
                 return config.defaultLocale
             }
@@ -53,7 +53,7 @@ const FormElementMixin = defineComponent({
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         blur: (event?: Event) => true,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        focus: (event: Event) => true
+        focus: (event?: Event) => true
     },
     data() {
         return {
@@ -141,7 +141,7 @@ const FormElementMixin = defineComponent({
             this.checkHtml5Validity()
         },
 
-        onFocus($event: Event) {
+        onFocus($event?: Event) {
             this.isFocused = true
             this.$emit('focus', $event)
         },
