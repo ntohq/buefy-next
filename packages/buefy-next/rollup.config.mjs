@@ -40,6 +40,7 @@ const TS_COMPONENTS = [
     'image',
     'input',
     'loading',
+    'menu',
     'modal',
     'notification',
     'pagination',
