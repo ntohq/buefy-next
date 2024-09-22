@@ -398,7 +398,7 @@ export default defineComponent({
             }
         },
 
-        onTyping(event: number | string | undefined) {
+        onTyping(event: number | string | null | undefined) {
             this.$emit('typing', typeof event === 'number' ? event : event?.trim())
         },
 
