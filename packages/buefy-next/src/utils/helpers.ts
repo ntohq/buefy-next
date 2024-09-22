@@ -311,7 +311,7 @@ export function toCssWidth(width: number | string | undefined): string | null {
  *
  * @internal
  */
-export function getMonthNames(locale = undefined, format: Intl.DateTimeFormatOptions['month'] = 'long'): string[] {
+export function getMonthNames(locale?: string | string[], format: Intl.DateTimeFormatOptions['month'] = 'long'): string[] {
     const dates = []
     for (let i = 0; i < 12; i++) {
         dates.push(new Date(2000, i, 15))
@@ -330,7 +330,7 @@ export function getMonthNames(locale = undefined, format: Intl.DateTimeFormatOpt
  *
  * @internal
  */
-export function getWeekdayNames(locale = undefined, format: Intl.DateTimeFormatOptions['weekday'] = 'narrow'): string[] {
+export function getWeekdayNames(locale?: string | string[], format: Intl.DateTimeFormatOptions['weekday'] = 'narrow'): string[] {
     const dates = []
     for (let i = 0; i < 7; i++) {
         const dt = new Date(2000, 0, i + 1)
@@ -396,7 +396,7 @@ export function isCustomElement(vm: Pick<ComponentPublicInstance, '$root'>) {
     return vm.$root != null && 'shadowRoot' in vm.$root.$options
 }
 
-export const isDefined = (d: unknown) => d !== undefined
+export const isDefined = <T>(d: T | undefined): d is T => d !== undefined
 
 /**
  * Checks if a value is null or undefined.
