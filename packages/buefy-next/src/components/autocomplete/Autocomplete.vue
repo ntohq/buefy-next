@@ -143,7 +143,7 @@ export default defineComponent({
     components: { BInput },
     mixins: [CompatFallthroughMixin, FormElementMixin],
     props: {
-        modelValue: [Number, String],
+        modelValue: [Number, String, null] as PropType<number | string | null>,
         data: {
             type: Array,
             default: () => []
@@ -195,7 +195,7 @@ export default defineComponent({
         select: (selected: any, event?: Event) => true,
         'select-footer': (event: Event) => true,
         'select-header': (event: Event) => true,
-        typing: (value: number | string | undefined) => true,
+        typing: (value: number | string | null | undefined) => true,
         'update:modelValue': (value: number | string) => true
         /* eslint-enable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
     },
