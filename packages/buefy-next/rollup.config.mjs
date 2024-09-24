@@ -43,6 +43,7 @@ const TS_COMPONENTS = [
     'loading',
     'menu',
     'modal',
+    'navbar',
     'notification',
     'pagination',
     'select',
