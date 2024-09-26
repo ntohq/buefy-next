@@ -55,7 +55,6 @@ const JS_COMPONENTS = [
     'numberinput',
     'pagination',
     'progress',
-    'radio',
     'rate',
     'select',
     'sidebar',
