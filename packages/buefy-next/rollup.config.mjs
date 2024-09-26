@@ -46,6 +46,8 @@ const TS_COMPONENTS = [
     'navbar',
     'notification',
     'pagination',
+    'radio',
+    'radiobutton',
     'select',
     'snackbar',
     'switch',
