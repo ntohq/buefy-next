@@ -214,7 +214,7 @@ export function removeElement(el: Element) {
     }
 }
 
-export function createAbsoluteElement(el: Element): Element {
+export function createAbsoluteElement(el: Element): HTMLElement {
     const root = document.createElement('div')
     root.style.position = 'absolute'
     root.style.left = '0px'
