@@ -48,6 +48,7 @@ const TS_COMPONENTS = [
     'pagination',
     'radio',
     'radiobutton',
+    'rate',
     'select',
     'snackbar',
     'switch',
