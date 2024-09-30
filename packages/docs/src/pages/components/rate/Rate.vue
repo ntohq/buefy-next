@@ -9,18 +9,19 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
     import api from './api/rate'
     import variables from './variables/rate'
     import { shallowFields } from '@/utils'
 
-    import ExSimple from './examples/ExSimple'
+    import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
 
-    import ExFull from './examples/ExFull'
+    import ExFull from './examples/ExFull.vue'
     import ExFullCode from './examples/ExFull.vue?raw'
 
-    export default {
+    export default defineComponent({
         data() {
             return {
                 api,
@@ -33,5 +34,5 @@
                 ExFullCode
             }
         }
-    }
+    })
 </script>
