@@ -1,5 +1,7 @@
 import type { App } from 'vue'
 
+import Color from './color'
+
 /**
  * Type that can be bound to `class` attribute in Vue.
  *
@@ -238,6 +240,18 @@ export interface BuefyConfig {
      * Buefy provides a default implementation if omitted.
      */
     defaultTimeParser?: ((date: string) => Date | null) | null,
+    /**
+     * Default color formatter.
+     * Default function that the `colorFormatter` prop of `Colorpicker` calls.
+     * Buefy provides a default implementation if omitted.
+     */
+    defaultColorFormatter?: ((color: Color) => string) | null,
+    /**
+     * Default color parser.
+     * Default function that the `colorParser` prop of `Colorpicker` calls.
+     * Buefy provides a default implementation if omitted.
+     */
+    defaultColorParser?: ((color: string) => Color | null) | null,
     /**
      * Default cancellable options of `Modal`.
      * `['escape', 'x', 'outside', 'button']` by default.
@@ -510,6 +524,8 @@ let config: BuefyConfig = {
     defaultUnselectableDaysOfWeek: null,
     defaultTimeFormatter: null,
     defaultTimeParser: null,
+    defaultColorFormatter: null,
+    defaultColorParser: null,
     defaultModalCanCancel: ['escape', 'x', 'outside', 'button'],
     defaultModalScroll: null,
     defaultDatepickerMobileNative: true,
