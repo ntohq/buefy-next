@@ -41,12 +41,12 @@
 import { defineComponent } from 'vue'
 import type { ExtractComponentProps } from '../../utils/helpers'
 import config from '../../utils/config'
-import Icon from '../icon/Icon.vue'
+import BIcon from '../icon/Icon.vue'
 
 const Rate = defineComponent({
     name: 'BRate',
     components: {
-        [Icon.name as string]: Icon
+        BIcon
     },
     props: {
         modelValue: {
@@ -101,10 +101,10 @@ const Rate = defineComponent({
                     result = ''
                 } else {
                     result = new Intl.NumberFormat(this!.locale)
-                        .format(this.modelValue).toString()
+                        .format(this.modelValue)
                 }
             } else if (this.showText && this.texts) {
-                result = this.texts[Math.ceil(this.newValue) - 1].toString()
+                result = this.texts[Math.ceil(this.newValue) - 1]
             }
             return result
         },
