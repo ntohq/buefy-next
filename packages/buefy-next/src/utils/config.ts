@@ -241,6 +241,14 @@ export interface BuefyConfig {
      */
     defaultTimeParser?: ((date: string) => Date | null) | null,
     /**
+     * Default "Hours" label on `Clockpicker`.
+     */
+    defaultClockpickerHoursLabel?: string | null,
+    /**
+     * Default "Minutes" label on `Clockpicker`.
+     */
+    defaultClockpickerMinutesLabel?: string | null,
+    /**
      * Default color formatter.
      * Default function that the `colorFormatter` prop of `Colorpicker` calls.
      * Buefy provides a default implementation if omitted.
@@ -524,6 +532,8 @@ let config: BuefyConfig = {
     defaultUnselectableDaysOfWeek: null,
     defaultTimeFormatter: null,
     defaultTimeParser: null,
+    defaultClockpickerHoursLabel: null,
+    defaultClockpickerMinutesLabel: null,
     defaultColorFormatter: null,
     defaultColorParser: null,
     defaultModalCanCancel: ['escape', 'x', 'outside', 'button'],
