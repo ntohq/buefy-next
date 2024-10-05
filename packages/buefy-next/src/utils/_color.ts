@@ -193,40 +193,76 @@ export class Color {
         }
 
         this.$channels = new Uint8Array(colorChannels.length)
-        colorChannels.forEach((channel, index) => {
-            Object.defineProperty(
-                this,
-                channel,
-                {
-                    get: () => this.$channels[index],
-                    set: (byte) => {
-                        if (!Number.isNaN(byte / 1)) {
-                            this.$channels[index] = Math.min(255, Math.max(0, byte))
-                        }
-                    },
-                    enumerable: true,
-                    configurable: true
-                }
-            )
-        })
-        // Required for observability
-        hslChannels.forEach((name: typeof hslChannels[number]) => {
-            const capitalizedName = name.replace(/^./, (m) => m.toUpperCase()) as CapitalizedHslChannel
-            Object.defineProperty(
-                this,
-                name,
-                {
-                    get: () => this[`get${capitalizedName}`](),
-                    set: (value) => {
-                        if (!Number.isNaN(value / 1)) {
-                            this[`set${capitalizedName}`](value)
-                        }
-                    },
-                    enumerable: true,
-                    configurable: true
-                }
-            )
-        })
+    }
+
+    get red(): number {
+        return this.$channels[0]
+    }
+
+    set red(byte: number) {
+        if (!Number.isNaN(byte / 1)) {
+            this.$channels[0] = Math.min(255, Math.max(0, byte))
+        }
+    }
+
+    get green(): number {
+        return this.$channels[1]
+    }
+
+    set green(byte: number) {
+        if (!Number.isNaN(byte / 1)) {
+            this.$channels[1] = Math.min(255, Math.max(0, byte))
+        }
+    }
+
+    get blue(): number {
+        return this.$channels[2]
+    }
+
+    set blue(byte: number) {
+        if (!Number.isNaN(byte / 1)) {
+            this.$channels[2] = Math.min(255, Math.max(0, byte))
+        }
+    }
+
+    get alpha(): number {
+        return this.$channels[3]
+    }
+
+    set alpha(byte: number) {
+        if (!Number.isNaN(byte / 1)) {
+            this.$channels[3] = Math.min(255, Math.max(0, byte))
+        }
+    }
+
+    get hue(): number {
+        return this.getHue()
+    }
+
+    set hue(value: number) {
+        if (!Number.isNaN(value / 1)) {
+            this.setHue(value)
+        }
+    }
+
+    get saturation(): number {
+        return this.getSaturation()
+    }
+
+    set saturation(value: number) {
+        if (!Number.isNaN(value / 1)) {
+            this.setSaturation(value)
+        }
+    }
+
+    get lightness(): number {
+        return this.getLightness()
+    }
+
+    set lightness(value: number) {
+        if (!Number.isNaN(value / 1)) {
+            this.setLightness(value)
+        }
     }
 
     getHue() {
