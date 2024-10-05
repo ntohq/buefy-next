@@ -26,26 +26,28 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
     import api from './api/clockpicker'
     import { shallowFields } from '@/utils'
 
-    import ExSimple from './examples/ExSimple'
+    import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
 
-    import ExNonReadonly from './examples/ExNonReadonly'
+    import ExNonReadonly from './examples/ExNonReadonly.vue'
     import ExNonReadonlyCode from './examples/ExNonReadonly.vue?raw'
 
-    import ExRange from './examples/ExRange'
+    import ExRange from './examples/ExRange.vue'
     import ExRangeCode from './examples/ExRange.vue?raw'
 
-    import ExFooter from './examples/ExFooter'
+    import ExFooter from './examples/ExFooter.vue'
     import ExFooterCode from './examples/ExFooter.vue?raw'
 
-    import ExColors from './examples/ExColors'
+    import ExColors from './examples/ExColors.vue'
     import ExColorsCode from './examples/ExColors.vue?raw'
 
-    export default {
+    export default defineComponent({
         data() {
             return {
                 api,
@@ -63,5 +65,5 @@
                 ExColorsCode
             }
         }
-    }
+    })
 </script>
