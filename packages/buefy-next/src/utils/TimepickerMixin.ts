@@ -434,7 +434,7 @@ export default defineComponent({
                 value)
         },
 
-        onHoursChange(value: string) {
+        onHoursChange(value: number | string) {
             if (!this.minutesSelected && typeof this.defaultMinutes !== 'undefined') {
                 this.minutesSelected = this.defaultMinutes
             }
@@ -442,30 +442,30 @@ export default defineComponent({
                 this.secondsSelected = this.defaultSeconds
             }
             this.updateDateSelected(
-                parseInt(value, 10),
+                parseInt(`${value}`, 10),
                 this.minutesSelected,
                 this.enableSeconds ? this.secondsSelected : 0,
                 this.meridienSelected
             )
         },
 
-        onMinutesChange(value: string) {
+        onMinutesChange(value: number | string) {
             if (!this.secondsSelected && this.defaultSeconds) {
                 this.secondsSelected = this.defaultSeconds
             }
             this.updateDateSelected(
                 this.hoursSelected,
-                parseInt(value, 10),
+                parseInt(`${value}`, 10),
                 this.enableSeconds ? this.secondsSelected : 0,
                 this.meridienSelected
             )
         },
 
-        onSecondsChange(value: string) {
+        onSecondsChange(value: number | string) {
             this.updateDateSelected(
                 this.hoursSelected,
                 this.minutesSelected,
-                parseInt(value, 10),
+                parseInt(`${value}`, 10),
                 this.meridienSelected
             )
         },
@@ -720,7 +720,7 @@ export default defineComponent({
         formatNumber(value: number, prependZero?: boolean) {
             return this.isHourFormat24 || prependZero
                 ? this.pad(value)
-                : value
+                : `${value}`
         },
 
         pad(value: number) {
