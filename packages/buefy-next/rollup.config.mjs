@@ -34,6 +34,7 @@ const TS_COMPONENTS = [
     'button',
     'carousel',
     'checkbox',
+    'clockpicker',
     'colorpicker',
     'datepicker',
     'dialog',
