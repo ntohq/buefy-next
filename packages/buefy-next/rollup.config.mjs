@@ -32,6 +32,7 @@ const components = fs
 const TS_COMPONENTS = [
     'autocomplete',
     'button',
+    'carousel',
     'checkbox',
     'colorpicker',
     'datepicker',
