@@ -75,7 +75,7 @@ export default defineComponent({
         BIcon,
         BSlotComponent
     },
-    mixins: [TabbedMixin('tab')],
+    mixins: [TabbedMixin<TabbedChild>('tab')],
     props: {
         expanded: {
             type: Boolean,
