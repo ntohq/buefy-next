@@ -7,12 +7,12 @@ import ProviderParentMixin, { Sorted } from './ProviderParentMixin'
 import type { TabbedChild } from './TabbedTypes'
 import { bound } from './helpers'
 
-export default (cmp: string) => defineComponent({
+export default <Child extends TabbedChild>(cmp: string) => defineComponent({
     components: {
         BIcon,
         BSlotComponent
     },
-    mixins: [ProviderParentMixin<typeof Sorted, TabbedChild>(cmp, Sorted)],
+    mixins: [ProviderParentMixin<typeof Sorted, Child>(cmp, Sorted)],
     props: {
         modelValue: {
             type: [String, Number, null] as PropType<string | number | null | undefined>,
@@ -49,11 +49,16 @@ export default (cmp: string) => defineComponent({
     },
     computed: {
         activeItem() {
+            // the `childItems` data field has the type `UnwrapRefSimple<Child[]>`.
+            // while `UnwrapRefSimple<T>` has the same structure as `T`, it is
+            // not implicitly assignable to `T` when `T` is given as a type
+            // parameter.
+            const childItems: Child[] = this.childItems as Child[]
             return this.activeId === undefined
                 ? this.items[0]
                 : (this.activeId === null
                     ? null
-                    : this.childItems.find((i) => i.uniqueValue === this.activeId))
+                    : childItems.find((i) => i.uniqueValue === this.activeId))
         },
         items() {
             return this.sortedItems

@@ -7,8 +7,8 @@ import type { TabbedParent } from './TabbedTypes'
 
 export type TransitionName = 'slide-next' | 'slide-prev' | 'slide-up' | 'slide-down'
 
-export default (parentCmp: string) => defineComponent({
-    mixins: [InjectedChildMixin<typeof Sorted, TabbedParent>(parentCmp, Sorted)],
+export default <Parent extends TabbedParent = TabbedParent>(parentCmp: string) => defineComponent({
+    mixins: [InjectedChildMixin<typeof Sorted, Parent>(parentCmp, Sorted)],
     props: {
         label: String,
         icon: String,
