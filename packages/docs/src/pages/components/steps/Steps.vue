@@ -23,30 +23,32 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
     import api from './api/steps'
     import variables from './variables/steps'
     import { shallowFields } from '@/utils'
 
-    import ExSimple from './examples/ExSimple'
+    import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
 
-    import ExDynamic from './examples/ExDynamic'
+    import ExDynamic from './examples/ExDynamic.vue'
     import ExDynamicCode from './examples/ExDynamic.vue?raw'
 
-    import ExIcons from './examples/ExIcons'
+    import ExIcons from './examples/ExIcons.vue'
     import ExIconsCode from './examples/ExIcons.vue?raw'
 
-    import ExSizes from './examples/ExSizes'
+    import ExSizes from './examples/ExSizes.vue'
     import ExSizesCode from './examples/ExSizes.vue?raw'
 
-    import ExTypes from './examples/ExTypes'
+    import ExTypes from './examples/ExTypes.vue'
     import ExTypesCode from './examples/ExTypes.vue?raw'
 
-    import ExVertical from './examples/ExVertical'
+    import ExVertical from './examples/ExVertical.vue'
     import ExVerticalCode from './examples/ExVertical.vue?raw'
 
-    export default {
+    export default defineComponent({
         data() {
             return {
                 api,
@@ -67,5 +69,5 @@
                 ExVerticalCode
             }
         }
-    }
+    })
 </script>
