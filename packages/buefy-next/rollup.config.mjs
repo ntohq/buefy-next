@@ -47,7 +47,6 @@ const JS_COMPONENTS = [
     'rate',
     'select',
     'slider',
-    'steps',
     'table',
     'tabs',
     'tag',
