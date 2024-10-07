@@ -54,6 +54,7 @@ const TS_COMPONENTS = [
     'rate',
     'select',
     'snackbar',
+    'steps',
     'switch',
     'table',
     'tabs',
