@@ -48,6 +48,7 @@ const TS_COMPONENTS = [
     'modal',
     'navbar',
     'notification',
+    'numberinput',
     'pagination',
     'radio',
     'radiobutton',
