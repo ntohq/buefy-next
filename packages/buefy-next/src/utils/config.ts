@@ -241,6 +241,19 @@ export interface BuefyConfig {
      */
     defaultTimeParser?: ((date: string) => Date | null) | null,
     /**
+     * Default datetime formatter used by `Datetimepicker`.
+     */
+    defaultDatetimeFormatter?: ((date: Date) => string) | null,
+    /**
+     * Default datetime parser used by `Datetimepicker`.
+     */
+    defaultDatetimeParser?: ((date: string) => Date | null) | null,
+    /**
+     * Default datetime creator.
+     * Default function that `datetimeCreator` prop of `Datetimepicker` uses.
+     */
+    defaultDatetimeCreator?: ((date: Date) => Date) | null,
+    /**
      * Default "Hours" label on `Clockpicker`.
      */
     defaultClockpickerHoursLabel?: string | null,
@@ -532,6 +545,9 @@ let config: BuefyConfig = {
     defaultUnselectableDaysOfWeek: null,
     defaultTimeFormatter: null,
     defaultTimeParser: null,
+    defaultDatetimeFormatter: null,
+    defaultDatetimeParser: null,
+    defaultDatetimeCreator: null,
     defaultClockpickerHoursLabel: null,
     defaultClockpickerMinutesLabel: null,
     defaultColorFormatter: null,
