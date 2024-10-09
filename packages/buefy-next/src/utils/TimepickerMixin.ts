@@ -126,8 +126,8 @@ export default defineComponent({
     props: {
         modelValue: [Date, null] as PropType<Date | null>,
         inline: Boolean,
-        minTime: Date,
-        maxTime: Date,
+        minTime: [Date, null] as PropType<Date | null>,
+        maxTime: [Date, null] as PropType<Date | null>,
         placeholder: String,
         editable: Boolean,
         disabled: Boolean,
