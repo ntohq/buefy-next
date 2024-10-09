@@ -46,7 +46,6 @@ const JS_COMPONENTS = [
     'pagination',
     'rate',
     'select',
-    'slider',
     'steps',
     'table',
     'tabs',
