@@ -37,6 +37,7 @@ const TS_COMPONENTS = [
     'clockpicker',
     'colorpicker',
     'datepicker',
+    'datetimepicker',
     'dialog',
     'dropdown',
     'field',
