@@ -58,7 +58,6 @@ const JS_COMPONENTS = [
     'radio',
     'rate',
     'select',
-    'sidebar',
     'skeleton',
     'slider',
     'snackbar',
