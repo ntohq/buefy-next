@@ -11,21 +11,23 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
     import api from './api/skeleton'
     import variables from './variables/skeleton'
     import { shallowFields } from '@/utils'
 
-    import ExSimple from './examples/ExSimple'
+    import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
 
-    import ExMediaTemplate from './examples/ExMediaTemplate'
+    import ExMediaTemplate from './examples/ExMediaTemplate.vue'
     import ExMediaTemplateCode from './examples/ExMediaTemplate.vue?raw'
 
-    import ExCardTemplate from './examples/ExCardTemplate'
+    import ExCardTemplate from './examples/ExCardTemplate.vue'
     import ExCardTemplateCode from './examples/ExCardTemplate.vue?raw'
 
-    export default {
+    export default defineComponent({
         data() {
             return {
                 api,
@@ -40,5 +42,5 @@
                 ExCardTemplateCode
             }
         }
-    }
+    })
 </script>
