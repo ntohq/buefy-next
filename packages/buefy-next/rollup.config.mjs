@@ -55,6 +55,7 @@ const TS_COMPONENTS = [
     'radiobutton',
     'rate',
     'select',
+    'skeleton',
     'slider',
     'snackbar',
     'steps',
