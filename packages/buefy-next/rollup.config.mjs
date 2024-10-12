@@ -76,7 +76,7 @@ const TS_COMPONENTS = [
 const entries = {
     index: './src/index.ts',
     helpers: './src/utils/helpers.ts',
-    config: './src/utils/ConfigComponent.js',
+    config: './src/utils/ConfigComponent.ts',
     ...components.reduce((obj, name) => {
         const ext = TS_COMPONENTS.indexOf(name) !== -1 ? 'ts' : 'js'
         obj[name] = (baseFolder + componentsFolder + name + `/index.${ext}`)
