@@ -69,9 +69,9 @@ export interface IconPack {
      * Available sizes.
      * Maps size names to size values.
      */
-    sizes: Record<string, string | null>,
+    sizes: Record<string, string | null>
     /** Icon prefix. */
-    iconPrefix: string,
+    iconPrefix?: string
 }
 
 /**
