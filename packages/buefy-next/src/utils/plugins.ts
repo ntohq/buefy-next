@@ -26,9 +26,10 @@ export const registerComponent = (Vue: App, component: Component, name?: string)
     Vue.component(componentName, component)
 }
 
-// TODO: refine the type of `component`.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const registerComponentProgrammatic = (Vue: App, property: string, component: any) => {
+export const registerComponentProgrammatic = <
+    K extends keyof App['config']['globalProperties']['$buefy'],
+    C extends App['config']['globalProperties']['$buefy'][K]
+>(Vue: App, property: K, component: C) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (!Vue.config.globalProperties.$buefy) Vue.config.globalProperties.$buefy = {} as any
     Vue.config.globalProperties.$buefy[property] = component
