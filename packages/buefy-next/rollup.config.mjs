@@ -35,6 +35,7 @@ const TS_COMPONENTS = [
     'carousel',
     'checkbox',
     'clockpicker',
+    'collapse',
     'colorpicker',
     'datepicker',
     'datetimepicker',
