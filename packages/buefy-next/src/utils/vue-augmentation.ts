@@ -8,6 +8,7 @@
 import 'vue'
 
 import type { DialogProgrammatic } from '../components/dialog'
+import type { LoadingProgrammatic } from '../components/loading'
 import type { ModalProgrammatic } from '../components/modal'
 import type { NotificationProgrammatic } from '../components/notification'
 import type { SnackbarProgrammatic } from '../components/snackbar'
@@ -24,6 +25,7 @@ declare module '@vue/runtime-core' {
             config: typeof ConfigComponent,
             globalNoticeInterval?: ReturnType<typeof setTimeout>,
             dialog: DialogProgrammatic,
+            loading: LoadingProgrammatic,
             modal: ModalProgrammatic,
             notification: NotificationProgrammatic,
             snackbar: SnackbarProgrammatic,
