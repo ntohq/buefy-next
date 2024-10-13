@@ -16,11 +16,20 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
+    import ApiView from '@/components/ApiView.vue'
+    import CodeView from '@/components/CodeView.vue'
     import { preformat } from '@/utils'
+
     import api from './api/constructor-options'
 
-    export default {
+    export default defineComponent({
+        components: {
+            ApiView,
+            CodeView
+        },
         data() {
             return {
                 api,
@@ -48,5 +57,5 @@
             }
         },
         methods: { preformat }
-    }
+    })
 </script>
