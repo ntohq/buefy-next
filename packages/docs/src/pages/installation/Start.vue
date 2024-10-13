@@ -111,10 +111,19 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
+    import { BMessage } from '@ntohq/buefy-next'
+
+    import CodeView from '@/components/CodeView.vue'
     import { preformat } from '@/utils'
 
-    export default {
+    export default defineComponent({
+        components: {
+            BMessage,
+            CodeView
+        },
         data() {
             return {
                 importingBundle: `
@@ -190,7 +199,7 @@
         },
         methods: {
             preformat,
-            slugifyTitle(title) {
+            slugifyTitle(title: string) {
                 if (!title) return ''
                 return title.toLowerCase()
                     .replace(/\s+/g, '-') // Replace spaces with -
@@ -200,5 +209,5 @@
                     .replace(/-+$/, '') // Trim - from end of text
             }
         }
-    }
+    })
 </script>
