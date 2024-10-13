@@ -49,10 +49,19 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
+    import { defineComponent } from 'vue'
+
+    import { BMessage } from '@ntohq/buefy-next'
+
+    import CodeView from '@/components/CodeView.vue'
     import { preformat } from '@/utils'
 
-    export default {
+    export default defineComponent({
+        components: {
+            BMessage,
+            CodeView
+        },
         data() {
             return {
                 sass: `
@@ -147,5 +156,5 @@
             }
         },
         methods: { preformat }
-    }
+    })
 </script>
