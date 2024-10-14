@@ -30,6 +30,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@mdi/font": "^6.9.96",
+    "@types/cleave.js": "^1.4.12",
     "@types/lodash": "^4.14.202",
     "@types/scrollreveal": "^0.0.11",
     "axios": "^1.5.1",
