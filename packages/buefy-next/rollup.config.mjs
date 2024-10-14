@@ -4,6 +4,7 @@ import cjs from '@rollup/plugin-commonjs'
 import babel from '@rollup/plugin-babel'
 import terser from '@rollup/plugin-terser'
 import vue from '@vitejs/plugin-vue'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -188,7 +189,11 @@ export default () => {
                 }),
                 esbuild(esbuildConfig),
                 vue(vuePluginConfig),
-                cjs()
+                cjs(),
+                visualizer({
+                    filename: 'tiers/stats.json',
+                    template: 'raw-data'
+                })
             ]
         },
         {
