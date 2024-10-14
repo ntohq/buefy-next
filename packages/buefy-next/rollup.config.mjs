@@ -48,6 +48,7 @@ const TS_COMPONENTS = [
     'input',
     'loading',
     'menu',
+    'message',
     'modal',
     'navbar',
     'notification',
