@@ -40,7 +40,6 @@ const JS_COMPONENTS = [
     'dialog',
     'input',
     'menu',
-    'message',
     'notification',
     'numberinput',
     'pagination',
