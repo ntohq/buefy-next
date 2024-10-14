@@ -137,13 +137,23 @@ function collectGroupedTiers() {
     return tiers
 }
 
+function normalizeTiers(tiers) {
+    const tierIds = Object.keys(tiers).map(Number)
+    tierIds.sort((a, b) => a - b)
+    const newTiers = {}
+    tierIds.forEach((tierId, index) => {
+        newTiers[index] = tiers[tierId]
+    })
+    return newTiers
+}
+
 // Actually processes data
 
 assignGroupIdsToNodeMetas()
 assignTierIdsToNodeMetas()
 assignGroupTierIdsToNodeMetas()
 
-const tiers = collectGroupedTiers()
+const tiers = normalizeTiers(collectGroupedTiers())
 if (!isSilent) {
     for (const [tierId, tier] of Object.entries(tiers)) {
         console.log(`tier-${tierId}:`, tier)
