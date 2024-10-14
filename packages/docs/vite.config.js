@@ -4,6 +4,7 @@ import * as util from 'node:util'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import commonjs from 'vite-plugin-commonjs'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const readFile = util.promisify(fs.readFile)
 
@@ -101,6 +102,10 @@ export default defineConfig({
         },
       },
     },
+    visualizer({
+        filename: './tiers/stats.json',
+        template: 'raw-data'
+    })
   ],
   resolve: {
     alias: {
