@@ -26,9 +26,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { shallowFields } from '@/utils'
+import ApiView from '@/components/ApiView.vue'
+import Example from '@/components/Example.vue'
+import VariablesView from '@/components/VariablesView.vue'
+
 import api from './api/breadcrumb'
 import variables from './variables/breadcrumb'
-import { shallowFields } from '@/utils'
 
 import ExAlignments from './examples/ExAlignments.vue'
 import ExAlignmentsCode from './examples/ExAlignments.vue?raw'
@@ -42,6 +46,12 @@ import ExSizesCode from './examples/ExSizes.vue?raw'
 export default defineComponent({
 
     name: 'Breadcrumb',
+
+    components: {
+        ApiView,
+        Example,
+        VariablesView
+    },
 
     data () {
         return {
