@@ -34,6 +34,9 @@
     import { defineComponent } from 'vue'
 
     import { preformat as _preformat, shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+    import VariablesView from '@/components/VariablesView.vue'
 
     import api from './api/modal'
     import variables from './variables/modal'
@@ -52,6 +55,11 @@
     import ExFullScreenCode from './examples/ExFullScreen.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example,
+            VariablesView
+        },
         data() {
             return {
                 api,
