@@ -49,6 +49,11 @@
     import { defineComponent } from 'vue'
 
     import { preformat, shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import CodeView from '@/components/CodeView.vue'
+    import Example from '@/components/Example.vue'
+    import VariablesView from '@/components/VariablesView.vue'
+
     import api from './api/icon'
     import variables from './variables/icon'
     import usage from './usage.js?raw'
@@ -66,6 +71,12 @@
     import ExCustomCode from './examples/ExCustom.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            CodeView,
+            Example,
+            VariablesView
+        },
         data() {
             return {
                 api,
