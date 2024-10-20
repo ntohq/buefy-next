@@ -17,8 +17,11 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
-    import api from './api/collapse'
     import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+
+    import api from './api/collapse'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -36,6 +39,10 @@
     import ExAccordionCode from './examples/ExAccordion.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example
+        },
         data() {
             return {
                 api,
