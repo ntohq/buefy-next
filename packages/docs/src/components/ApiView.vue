@@ -74,7 +74,7 @@ export interface SlotInfo {
 export interface EventInfo {
     name: string
     description: string
-    parameters: string
+    parameters?: string
 }
 
 export interface MethodInfo {
