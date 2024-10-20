@@ -88,9 +88,13 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
+    import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+    import VariablesView from '@/components/VariablesView.vue'
+
     import api from './api/datepicker'
     import variables from './variables/datepicker'
-    import { shallowFields } from '@/utils'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -132,6 +136,11 @@
     import ExMultipleInputCode from './examples/ExMultipleInput.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example,
+            VariablesView
+        },
         data() {
             return {
                 api,
