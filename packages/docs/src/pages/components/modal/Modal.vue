@@ -35,6 +35,7 @@
 
     import { preformat as _preformat, shallowFields } from '@/utils'
     import ApiView from '@/components/ApiView.vue'
+    import CodeView from '@/components/CodeView.vue'
     import Example from '@/components/Example.vue'
     import VariablesView from '@/components/VariablesView.vue'
 
@@ -57,6 +58,7 @@
     export default defineComponent({
         components: {
             ApiView,
+            CodeView,
             Example,
             VariablesView
         },
