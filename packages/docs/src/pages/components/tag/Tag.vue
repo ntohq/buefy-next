@@ -27,7 +27,10 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue'
+
     import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
 
     import api from './api/tag'
 
@@ -53,6 +56,10 @@
     import ExSizesCode from './examples/ExSizes.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example
+        },
         data() {
             return {
                 api,
