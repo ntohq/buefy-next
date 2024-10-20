@@ -68,7 +68,7 @@ export interface PropInfo {
 export interface SlotInfo {
     name: string
     description: string
-    props: string
+    props?: string
 }
 
 export interface EventInfo {
