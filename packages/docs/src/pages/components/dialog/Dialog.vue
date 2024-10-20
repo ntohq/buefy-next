@@ -23,9 +23,11 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
-    import { preformat } from '@/utils'
+    import { preformat, shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+
     import api from './api/dialog'
-    import { shallowFields } from '@/utils'
 
     import ExAlertDialog from './examples/ExAlertDialog.vue'
     import ExAlertDialogCode from './examples/ExAlertDialog.vue?raw'
@@ -40,6 +42,10 @@
     import promise from './promise.js?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example
+        },
         data() {
             return {
                 api,
