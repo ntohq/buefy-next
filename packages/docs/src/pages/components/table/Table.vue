@@ -142,9 +142,15 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
+    import { BMessage } from '@ntohq/buefy-next'
+
+    import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+    import VariablesView from '@/components/VariablesView.vue'
+
     import api from './api/table'
     import variables from './variables/table'
-    import { shallowFields } from '@/utils'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -198,6 +204,12 @@
     import ExDraggableRowsCode from './examples/ExDraggableRows.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            BMessage,
+            Example,
+            VariablesView
+        },
         data() {
             return {
                 api,
