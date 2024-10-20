@@ -17,8 +17,11 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
-    import api from './api/upload'
     import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+
+    import api from './api/upload'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -37,6 +40,10 @@
 
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example
+        },
         data() {
             return {
                 api,
