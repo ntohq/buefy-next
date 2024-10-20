@@ -20,10 +20,14 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
-    import { preformat } from '@/utils'
+    import { preformat, shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import CodeView from '@/components/CodeView.vue'
+    import Example from '@/components/Example.vue'
+    import VariablesView from '@/components/VariablesView.vue'
+
     import api from './api/toast'
     import variables from './variables/toast'
-    import { shallowFields } from '@/utils'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -31,6 +35,12 @@
     import outsideVueInstance from './outside-vue-instance.js?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            CodeView,
+            Example,
+            VariablesView
+        },
         data() {
             return {
                 api,
