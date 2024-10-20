@@ -29,8 +29,11 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
 
-    import api from './api/datetimepicker'
     import { shallowFields } from '@/utils'
+    import ApiView from '@/components/ApiView.vue'
+    import Example from '@/components/Example.vue'
+
+    import api from './api/datetimepicker'
 
     import ExSimple from './examples/ExSimple.vue'
     import ExSimpleCode from './examples/ExSimple.vue?raw'
@@ -51,6 +54,10 @@
     import ExGranularityCode from './examples/ExGranularity.vue?raw'
 
     export default defineComponent({
+        components: {
+            ApiView,
+            Example
+        },
         data() {
             return {
                 api,
