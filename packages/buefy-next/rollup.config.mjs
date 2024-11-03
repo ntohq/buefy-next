@@ -54,6 +54,8 @@ const TS_COMPONENTS = [
     'notification',
     'numberinput',
     'pagination',
+    'progress',
+    'progressbar',
     'radio',
     'radiobutton',
     'rate',
