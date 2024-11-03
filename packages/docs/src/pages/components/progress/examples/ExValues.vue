@@ -64,7 +64,10 @@
 </template>
 
 <script>
-    export default {
+    import { defineComponent } from 'vue'
+    import { BField, BNumberInput, BProgress, BSelect, BSwitch } from '@ntohq/buefy-next'
+
+    export default defineComponent({
         data() {
             return {
                 indeterminate: false,
@@ -77,5 +80,5 @@
                 locale: undefined // Browser locale
             }
         }
-    }
+    })
 </script>
