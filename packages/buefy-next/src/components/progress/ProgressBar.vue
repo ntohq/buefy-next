@@ -52,18 +52,18 @@ const ProgressBar = defineComponent({
         },
         newType() {
             return [
-                (this.parent as ProgressInstance).size,
-                this.type || (this.parent as ProgressInstance).type
+                this.parentProgress.size,
+                this.type || this.parentProgress.type
             ]
         },
         newShowValue() {
-            return this.showValue || (this.parent as ProgressInstance).showValue
+            return this.showValue || this.parentProgress.showValue
         },
         newValue() {
-            return (this.parent as ProgressInstance).calculateValue(this.value)
+            return this.parentProgress.calculateValue(this.value)
         },
         barWidth() {
-            return `${(this.value === undefined ? 0 : this.value) * 100 / (this.parent as ProgressInstance).max}%`
+            return `${(this.value === undefined ? 0 : this.value) * 100 / this.parentProgress.max}%`
         }
     }
 })
