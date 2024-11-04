@@ -4,7 +4,7 @@
         :class="newType"
         role="progressbar"
         :aria-valuenow="value"
-        :aria-valuemax="parentMax"
+        :aria-valuemax="parentProgress.max"
         aria-valuemin="0"
         :style="{width: barWidth}"
     >
@@ -47,8 +47,8 @@ const ProgressBar = defineComponent({
         }
     },
     computed: {
-        parentMax() {
-            return (this.parent as ProgressInstance).max
+        parentProgress() {
+            return this.parent as ProgressInstance
         },
         newType() {
             return [
