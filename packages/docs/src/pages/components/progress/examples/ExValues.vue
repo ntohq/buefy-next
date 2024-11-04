@@ -63,11 +63,18 @@
     </section>
 </template>
 
-<script>
+<script lang="ts">
     import { defineComponent } from 'vue'
-    import { BField, BNumberInput, BProgress, BSelect, BSwitch } from '@ntohq/buefy-next'
+    import { BField, BNumberinput, BProgress, BSelect, BSwitch } from '@ntohq/buefy-next'
 
     export default defineComponent({
+        components: {
+            BField,
+            BNumberinput,
+            BProgress,
+            BSelect,
+            BSwitch
+        },
         data() {
             return {
                 indeterminate: false,
