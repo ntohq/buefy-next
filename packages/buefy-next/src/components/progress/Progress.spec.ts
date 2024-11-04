@@ -1,26 +1,23 @@
 import { shallowMount } from '@vue/test-utils'
-import type { VueWrapper } from '@vue/test-utils'
 import BProgress from '@components/progress/Progress.vue'
 import { describe, expect, it } from 'vitest'
 
-let wrapper: VueWrapper<InstanceType<typeof BProgress>>
-
 describe('BProgress', () => {
     it('is called', () => {
-        wrapper = shallowMount(BProgress)
+        const wrapper = shallowMount(BProgress)
         expect(wrapper.vm).toBeTruthy()
         expect(wrapper.vm.$options.name).toBe('BProgress')
     })
 
     it('render correctly', () => {
-        wrapper = shallowMount(BProgress)
+        const wrapper = shallowMount(BProgress)
 
         expect(wrapper.html()).toMatchSnapshot()
     })
 
     it('add value attribute when a value is passed', async () => {
         const value = 50
-        wrapper = shallowMount(BProgress)
+        const wrapper = shallowMount(BProgress)
         await wrapper.setProps({ value })
 
         expect(wrapper.find('.progress').attributes().value).toEqual(`${value}`)
@@ -28,7 +25,7 @@ describe('BProgress', () => {
 
     describe('Passing a value prop', () => {
         it('remove value attribute to the <progress> element', async () => {
-            wrapper = shallowMount(BProgress, {
+            const wrapper = shallowMount(BProgress, {
                 props: { value: undefined }
             })
 
@@ -39,7 +36,7 @@ describe('BProgress', () => {
         describe('Passing true to show-value prop', () => {
             it('adds a help <p> element in the root div.progress-wrapper when "show-value" prop is true', () => {
                 const value = 50
-                wrapper = shallowMount(BProgress, {
+                const wrapper = shallowMount(BProgress, {
                     props: {
                         value,
                         showValue: true
@@ -52,7 +49,7 @@ describe('BProgress', () => {
                 const value = 50
                 const max = 100
                 const format = 'percent'
-                wrapper = shallowMount(BProgress, {
+                const wrapper = shallowMount(BProgress, {
                     props: {
                         value,
                         max,
@@ -69,7 +66,7 @@ describe('BProgress', () => {
             it('display the trailing zeroes when setting the keepTrailingZeroes prop', () => {
                 const value = 50
                 const keepTrailingZeroes = true
-                wrapper = shallowMount(BProgress, {
+                const wrapper = shallowMount(BProgress, {
                     props: {
                         value,
                         keepTrailingZeroes,
