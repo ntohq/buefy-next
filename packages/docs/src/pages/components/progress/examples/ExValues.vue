@@ -5,7 +5,7 @@
             <b-field label="Type and Size">
                 <b-field grouped>
                     <b-select v-model="type" placeholder="Type">
-                        <option value="">Default</option>
+                        <option>Default</option>
                         <option value="is-primary">Primary</option>
                         <option value="is-success">Success</option>
                         <option value="is-warning">Warning</option>
@@ -78,7 +78,7 @@
         data() {
             return {
                 indeterminate: false,
-                type: "",
+                type: undefined,
                 size: 'is-medium',
                 showValue: true,
                 format: 'raw',
