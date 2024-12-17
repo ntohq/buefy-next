@@ -67,7 +67,7 @@ export default {
             default: 'slide'
         },
         tag: {
-            type: String,
+            type: [String, Object],
             default: 'a',
             validator: (value) => {
                 return config.defaultLinkTags.indexOf(value) >= 0
