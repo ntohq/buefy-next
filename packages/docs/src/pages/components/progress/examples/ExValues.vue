@@ -5,7 +5,7 @@
             <b-field label="Type and Size">
                 <b-field grouped>
                     <b-select v-model="type" placeholder="Type">
-                        <option>Default</option>
+                        <option :value="undefined">Default</option>
                         <option value="is-primary">Primary</option>
                         <option value="is-success">Success</option>
                         <option value="is-warning">Warning</option>
