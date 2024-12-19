@@ -119,6 +119,17 @@
     import CodeView from '@/components/CodeView.vue'
     import { preformat } from '@/utils'
 
+    import {
+        fontAwesome5,
+        importingBundle,
+        importingCDNHtml,
+        importingComponentsAsVuePlugins,
+        importingNuxtBuefy,
+        importingSSR,
+        installNuxtBuefy,
+        materialIcons
+    } from './usage/start'
+
     export default defineComponent({
         components: {
             BMessage,
@@ -126,75 +137,14 @@
         },
         data() {
             return {
-                importingBundle: `
-                import Vue from 'vue'
-                import Buefy from 'buefy'
-                import 'buefy/dist/buefy.css'
-
-                Vue.use(Buefy)
-                `,
-                importingComponentsAsVuePlugins: `
-                import Vue from 'vue'
-                import { Table, Input } from 'buefy'
-                import 'buefy/dist/buefy.css'
-
-                Vue.use(Table)
-                Vue.use(Input)
-                `,
-                importingSSR: `
-                import Vue from 'vue'
-                import Buefy from 'buefy'
-                import 'buefy/dist/buefy.css'
-
-                Vue.use(Buefy) `,
-                installNuxtBuefy: `
-                // with npm
-                npm install nuxt-buefy
-
-                // with yarn
-                yarn add nuxt-buefy
-                `,
-                importingNuxtBuefy: `
-                {
-                    modules: [
-                        // Simple usage
-                        'nuxt-buefy',
-
-                        // Or you can customize
-                        ['nuxt-buefy', { css: false, materialDesignIcons: false }],
-                    ]
-                }`,
-                importingCDNHtml: `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
-                </head>
-
-                <body>
-                    <div id="app">
-                        <!-- Buefy components goes here -->
-                    </div>
-
-                    <script src="https://unpkg.com/vue@2"></\script>
-                    <!-- Full bundle -->
-                    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></\script>
-
-                    <!-- Individual components -->
-                    <script src="https://unpkg.com/buefy/dist/components/table"></\script>
-                    <script src="https://unpkg.com/buefy/dist/components/input"></\script>
-
-                    <script>
-                        new Vue({
-                            el: '#app'
-                        })
-                    </\script>
-                </body>
-                </html>`,
-                materialIcons: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">',
-                fontAwesome5: '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">'
+                importingBundle,
+                importingComponentsAsVuePlugins,
+                importingSSR,
+                installNuxtBuefy,
+                importingNuxtBuefy,
+                importingCDNHtml,
+                materialIcons,
+                fontAwesome5
             }
         },
         methods: {
