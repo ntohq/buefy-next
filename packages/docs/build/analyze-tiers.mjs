@@ -6,6 +6,7 @@ const isSilent = true
 
 const statsPath = './tiers/stats.json'
 const outputPath = './tiers/tiers.json'
+const minOutputPath = './tiers/tiers-min.json'
 const stats = JSON.parse(fs.readFileSync(statsPath, 'utf-8'))
 const { nodeMetas } = stats
 
@@ -38,6 +39,7 @@ function extractGroupId(path) {
     return GROUP_ID_EXTRACTORS
         .map((extractor) => extractor(path))
         .find((groupId) => groupId != null)
+        ?.replace(/\?.*$/, '') // removes trailing query string
 }
 
 function assignGroupIdsToNodeMetas() {
@@ -152,6 +154,16 @@ function normalizeTiers(tiers) {
     return newTiers
 }
 
+function retainGroupIds(tiers) {
+    const newTiers = {}
+    for (const tierId in tiers) {
+        const tier = tiers[tierId]
+        newTiers[tierId] = Object.keys(tier)
+        newTiers[tierId].sort()
+    }
+    return newTiers
+}
+
 // Actually processes data
 
 assignGroupIdsToNodeMetas()
@@ -159,9 +171,11 @@ assignTierIdsToNodeMetas()
 assignGroupTierIdsToNodeMetas()
 
 const tiers = normalizeTiers(collectGroupedTiers())
+const tiersMin = retainGroupIds(tiers)
 if (!isSilent) {
     for (const [tierId, tier] of Object.entries(tiers)) {
         console.log(`tier-${tierId}:`, tier)
     }
 }
 fs.writeFileSync(outputPath, JSON.stringify(tiers, null, 2))
+fs.writeFileSync(minOutputPath, JSON.stringify(tiersMin, null, 2))
