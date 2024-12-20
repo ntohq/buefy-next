@@ -1,4 +1,4 @@
-import _Vue from "vue";
+import _Vue, { Component } from "vue";
 import {ColorModifiers, DaysOfWeek, GlobalPositions, SizesModifiers} from "./helpers";
 
 // Component base definition
@@ -10,7 +10,7 @@ export class BComponent extends _Vue {
 export declare type BuefyConfig = {
     defaultContainerElement?: string,
     defaultIconPack?: string;
-    defaultIconComponent?: string;
+    defaultIconComponent?: Component;
     defaultIconPrev?: string;
     defaultIconNext?: string;
     defaultLocale?: undefined | string | string[],

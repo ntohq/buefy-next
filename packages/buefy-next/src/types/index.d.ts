@@ -23,12 +23,11 @@ export declare type BuefyNamespace = {
     modal: typeof ModalProgrammatic,
     snackbar: typeof SnackbarProgrammatic,
     toast: typeof ToastProgrammatic,
-    notification: typeof NotificationProgrammatic
-
+    notification: typeof NotificationProgrammatic,
 }
 
 declare const _default: {
-    install(Vue: typeof _Vue, config: BuefyConfig): void;
+    install(Vue: _Vue, config: BuefyConfig): void;
 };
 
 export {
