@@ -7,6 +7,8 @@
 // otherwise the post processing will be messed up.
 import 'vue'
 
+import type { LoadingProgrammatic } from '../components/loading'
+import type { ModalProgrammatic } from '../components/modal'
 import type { SnackbarProgrammatic } from '../components/snackbar'
 import ConfigComponent from './ConfigComponent'
 
@@ -19,6 +21,8 @@ declare module '@vue/runtime-core' {
         $buefy: {
             config: typeof ConfigComponent,
             globalNoticeInterval?: ReturnType<typeof setTimeout>,
+            loading: LoadingProgrammatic,
+            modal: ModalProgrammatic,
             snackbar: SnackbarProgrammatic,
             // TODO: make key-values more specific
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
