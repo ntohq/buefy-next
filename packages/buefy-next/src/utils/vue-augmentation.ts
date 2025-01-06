@@ -9,6 +9,7 @@ import 'vue'
 
 import type { LoadingProgrammatic } from '../components/loading'
 import type { ModalProgrammatic } from '../components/modal'
+import type { SnackbarProgrammatic } from '../components/snackbar'
 import type { ToastProgrammatic } from '../components/toast'
 import ConfigComponent from './ConfigComponent'
 
@@ -23,6 +24,7 @@ declare module '@vue/runtime-core' {
             globalNoticeInterval?: ReturnType<typeof setTimeout>,
             loading: LoadingProgrammatic,
             modal: ModalProgrammatic,
+            snackbar: SnackbarProgrammatic,
             toast: ToastProgrammatic,
             // TODO: make key-values more specific
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
