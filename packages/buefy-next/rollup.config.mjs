@@ -50,7 +50,6 @@ const JS_COMPONENTS = [
     'steps',
     'table',
     'tabs',
-    'tag',
     'timepicker',
     'upload',
 ]
