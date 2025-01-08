@@ -31,7 +31,6 @@ const components = fs
 
 const JS_COMPONENTS = [
     'autocomplete',
-    'button',
     'carousel',
     'clockpicker',
     'colorpicker',
@@ -39,7 +38,6 @@ const JS_COMPONENTS = [
     'datetimepicker',
     'dialog',
     'input',
-    'menu',
     'notification',
     'numberinput',
     'pagination',
@@ -49,7 +47,6 @@ const JS_COMPONENTS = [
     'steps',
     'table',
     'tabs',
-    'tag',
     'taginput',
     'timepicker',
     'upload',
