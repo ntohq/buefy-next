@@ -30,11 +30,8 @@ const components = fs
     )
 
 const JS_COMPONENTS = [
-    'autocomplete',
-    'colorpicker',
     'datepicker',
     'datetimepicker',
-    'numberinput',
     'table',
     'timepicker',
 ]
