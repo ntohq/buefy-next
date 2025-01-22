@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createDocsRouter } from './router'
-import { TinyEmitter } from 'tiny-emitter' // https://github.com/scottcorgan/tiny-emitter/issues/47#issuecomment-1551817340
 
 import Buefy, { createNewEvent } from '@ntohq/buefy-next'
 import Axios from 'axios'
@@ -34,13 +33,12 @@ vueApp.use(router)
 window.global ||= window
 
 vueApp.config.globalProperties.$http = Axios
-vueApp.config.globalProperties.$eventHub = new TinyEmitter()
+// vueApp.config.globalProperties.$eventHub = new TinyEmitter()
 
 // allows access to `$http` and `$eventHub` in all components
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
         $http: typeof Axios
-        $eventHub: TinyEmitter
     }
 }
 
