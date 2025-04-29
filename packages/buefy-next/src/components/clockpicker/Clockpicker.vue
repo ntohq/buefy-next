@@ -38,7 +38,7 @@
                         @input="onInput"
                         @change="onChange($event.target.value)"
                         @focus="handleOnFocus"
-                        @blur="checkHtml5Validity()"
+                        @blur="onBlur()"
                     />
                 </slot>
             </template>
@@ -167,7 +167,7 @@
             @keyup.enter="toggle(true)"
             @change="onChangeNativePicker"
             @focus="handleOnFocus"
-            @blur="onBlur() && checkHtml5Validity()"
+            @blur="onBlur()"
         />
     </div>
 </template>
@@ -277,7 +277,7 @@ export default defineComponent({
         computedValue: {
             handler(val) {
                 if (!this.isEditing) {
-                    this.localInputValue = this.formatValue(val)
+                    this.localInputValue = this.formatValue(val) || ''
                 }
             },
             immediate: true
@@ -326,7 +326,7 @@ export default defineComponent({
                 this.computedValue = date
             } else {
                 // Reset to last valid value
-                this.localInputValue = this.formatValue(this.computedValue)
+                this.localInputValue = this.formatValue(this.computedValue) || ''
             }
         },
         onEditDone(event: KeyboardEvent) {
