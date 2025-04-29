@@ -33,12 +33,12 @@
                         v-bind="fallthroughAttrs"
                         :use-html5-validation="useHtml5Validation"
                         @click="onInputClick"
-                        @keyup.enter="toggle(true)"
+                        @keyup.enter="(event: KeyboardEvent) => {toggle(true); onEditDone(event)}"
+                        @keyup.escape="onEditDone"
                         @input="onInput"
                         @change="onChange($event.target.value)"
                         @focus="handleOnFocus"
                         @blur="checkHtml5Validity()"
-                        @keydown="onKeydown"
                     />
                 </slot>
             </template>
@@ -329,7 +329,7 @@ export default defineComponent({
                 this.localInputValue = this.formatValue(this.computedValue)
             }
         },
-        onKeydown(event: KeyboardEvent) {
+        onEditDone(event: KeyboardEvent) {
             if ((event.key === 'Enter' || event.key === 'Escape') && this.editable) {
                 this.isEditing = false
                 this.onBlur()
