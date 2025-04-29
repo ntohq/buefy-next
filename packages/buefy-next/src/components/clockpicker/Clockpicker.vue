@@ -230,7 +230,7 @@ export default defineComponent({
             isSelectingHour: true,
             isDragging: false,
             _isClockpicker: true,
-            localInputValue: null as string | null,
+            localInputValue: '' as string,
             isEditing: false
         }
     },
