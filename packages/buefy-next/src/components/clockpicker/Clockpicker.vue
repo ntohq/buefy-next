@@ -20,7 +20,8 @@
                     <b-input
                         ref="input"
                         autocomplete="off"
-                        :value="formatValue(computedValue)"
+                        :type="inputType"
+                        :value="editable ? localInputValue : formatValue(computedValue)"
                         :placeholder="placeholder"
                         :size="size"
                         :icon="icon"
@@ -33,9 +34,11 @@
                         :use-html5-validation="useHtml5Validation"
                         @click="onInputClick"
                         @keyup.enter="toggle(true)"
+                        @input="onInput"
                         @change="onChange($event.target.value)"
                         @focus="handleOnFocus"
                         @blur="checkHtml5Validity()"
+                        @keydown="onKeydown"
                     />
                 </slot>
             </template>
@@ -216,13 +219,19 @@ export default defineComponent({
         minutesLabel: {
             type: String,
             default: () => config.defaultClockpickerMinutesLabel || 'Min'
+        },
+        inputType: {
+            type: String,
+            default: 'text'
         }
     },
     data() {
         return {
             isSelectingHour: true,
             isDragging: false,
-            _isClockpicker: true
+            _isClockpicker: true,
+            localInputValue: null as string | null,
+            isEditing: false
         }
     },
     computed: {
@@ -264,6 +273,16 @@ export default defineComponent({
             return this.isSelectingHour ? this.isHourDisabled : this.isMinuteDisabled
         }
     },
+    watch: {
+        computedValue: {
+            handler(val) {
+                if (!this.isEditing) {
+                    this.localInputValue = this.formatValue(val)
+                }
+            },
+            immediate: true
+        }
+    },
     methods: {
         onClockInput(value: number) {
             if (this.isSelectingHour) {
@@ -291,6 +310,29 @@ export default defineComponent({
         onInputClick(event: MouseEvent) {
             if ((this.$refs.dropdown as BDropdownInstance).isActive) {
                 event.stopPropagation()
+            }
+        },
+        onInput(event: Event) {
+            if (!this.editable) return
+            this.isEditing = true
+            this.localInputValue = (event.target as HTMLInputElement).value
+        },
+        onBlur() {
+            this.checkHtml5Validity()
+            if (!this.editable) return
+
+            const date = this.timeParser(this.localInputValue, this)
+            if (date && !isNaN(date.valueOf())) {
+                this.computedValue = date
+            } else {
+                // Reset to last valid value
+                this.localInputValue = this.formatValue(this.computedValue)
+            }
+        },
+        onKeydown(event: KeyboardEvent) {
+            if ((event.key === 'Enter' || event.key === 'Escape') && this.editable) {
+                this.isEditing = false
+                this.onBlur()
             }
         }
     }
