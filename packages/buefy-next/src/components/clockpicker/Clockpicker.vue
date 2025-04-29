@@ -183,6 +183,7 @@ import BInput from '../input/Input.vue'
 import BClockpickerFace from './ClockpickerFace.vue'
 
 type BDropdownInstance = InstanceType<typeof BDropdown>
+type BInputInstance = InstanceType<typeof BInput>
 
 const outerPadding = 12
 
@@ -330,6 +331,9 @@ export default defineComponent({
                 this.onBlur()
             }
         }
+    },
+    mounted() {
+        (this.$refs.input as BInputInstance).newValue = this.formatValue(this.computedValue) || ''
     }
 })
 </script>
