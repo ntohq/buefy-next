@@ -20,7 +20,6 @@
                     <b-input
                         ref="input"
                         autocomplete="off"
-                        :type="inputType"
                         :value="editable ? localInputValue : formatValue(computedValue)"
                         :placeholder="placeholder"
                         :size="size"
@@ -219,10 +218,6 @@ export default defineComponent({
         minutesLabel: {
             type: String,
             default: () => config.defaultClockpickerMinutesLabel || 'Min'
-        },
-        inputType: {
-            type: String,
-            default: 'text'
         }
     },
     data() {
