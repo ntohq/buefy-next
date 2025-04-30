@@ -326,15 +326,15 @@ export default defineComponent({
             }
         },
         onEditDone(event: KeyboardEvent) {
-            if (!this.editable) return;
+            if (!this.editable) return
 
             if (event.key === 'Enter') {
-                this.isEditing = false;
-                this.onBlur();
+                this.isEditing = false
+                this.onBlur()
             } else if (event.key === 'Escape') {
-                this.isEditing = false;
+                this.isEditing = false
                 // Revert to the previous value without parsing the input
-                this.localInputValue = this.formatValue(this.computedValue) || '';
+                this.localInputValue = this.formatValue(this.computedValue) || ''
             }
         }
     },
