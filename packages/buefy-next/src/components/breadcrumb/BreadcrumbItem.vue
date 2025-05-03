@@ -21,7 +21,7 @@ export default {
     mixins: [CompatFallthroughMixin],
     props: {
         tag: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultBreadcrumbTag
             }

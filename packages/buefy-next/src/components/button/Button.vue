@@ -78,10 +78,10 @@ export default {
             }
         },
         tag: {
-            type: String,
+            type: [String, Object],
             default: 'button',
             validator: (value) => {
-                return config.defaultLinkTags.indexOf(value) >= 0
+                return typeof value === 'object' || config.defaultLinkTags.indexOf(value) >= 0
             }
         }
     },

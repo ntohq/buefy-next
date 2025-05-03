@@ -63,7 +63,7 @@ export default {
         },
         collapsible: Boolean,
         tag: {
-            type: String,
+            type: [String, Object],
             default: 'a'
         }
     },

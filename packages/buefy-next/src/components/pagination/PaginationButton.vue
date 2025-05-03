@@ -26,10 +26,10 @@ export default {
             required: true
         },
         tag: {
-            type: String,
+            type: [String, Object],
             default: 'a',
             validator: (value) => {
-                return config.defaultLinkTags.indexOf(value) >= 0
+                return typeof value === 'object' || config.defaultLinkTags.indexOf(value) >= 0
             }
         },
         disabled: {
