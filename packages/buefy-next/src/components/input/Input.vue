@@ -26,7 +26,7 @@
             class="textarea"
             :class="[inputClasses, customClass]"
             :maxlength="maxlength"
-            :value="computedValue"
+            :value="computedValue === null ? undefined : computedValue"
             v-bind="fallthroughAttrs"
             @input="onInput"
             @change="onChange"
@@ -45,7 +45,7 @@
         />
 
         <b-icon
-            v-if="!loading && hasIconRight"
+            v-if="!loading && hasIconRight && rightIcon"
             class="is-right"
             :class="{ 'is-clickable': passwordReveal || iconRightClickable }"
             :icon="rightIcon"
@@ -66,20 +66,23 @@
     </div>
 </template>
 
-<script>
-import Icon from '../icon/Icon.vue'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import type { PropType } from 'vue'
+
+import BIcon from '../icon/Icon.vue'
 import config from '../../utils/config'
 import CompatFallthroughMixin from '../../utils/CompatFallthroughMixin'
 import FormElementMixin from '../../utils/FormElementMixin'
 
-export default {
+export default defineComponent({
     name: 'BInput',
-    components: {
-        [Icon.name]: Icon
-    },
+    components: { BIcon },
     mixins: [CompatFallthroughMixin, FormElementMixin],
     props: {
-        modelValue: [Number, String],
+        modelValue: {
+            type: [Number, String] as PropType<string | number | undefined | null>
+        },
         type: {
             type: String,
             default: 'text'
@@ -100,13 +103,17 @@ export default {
         },
         iconRight: String,
         iconRightClickable: Boolean,
-        iconRightType: String
+        iconRightType: String,
+        // Native options to use in HTML5 validation
+        autocomplete: String
     },
-    emits: [
-        'icon-click',
-        'icon-right-click',
-        'update:modelValue'
-    ],
+    emits: {
+        /* eslint-disable @typescript-eslint/no-unused-vars */
+        'icon-click': (event: MouseEvent) => true,
+        'icon-right-click': (event: MouseEvent) => true,
+        'update:modelValue': (value: string | number | undefined) => true
+        /* eslint-enable @typescript-eslint/no-unused-vars */
+    },
     data() {
         return {
             newValue: this.modelValue,
@@ -123,7 +130,7 @@ export default {
             get() {
                 return this.newValue
             },
-            set(value) {
+            set(value: string | number | undefined) {
                 this.newValue = value
                 this.$emit('update:modelValue', value)
             }
@@ -162,7 +169,7 @@ export default {
             if (this.passwordReveal) {
                 return 'is-primary'
             } else if (this.iconRight) {
-                return this.iconRightType || null
+                return this.iconRightType || undefined
             }
             return this.statusType
         },
@@ -184,7 +191,7 @@ export default {
             return iconClasses
         },
 
-        /**
+        /*
         * Icon name (MDI) based on the type.
         */
         statusTypeIcon() {
@@ -197,20 +204,20 @@ export default {
             }
         },
 
-        /**
+        /*
         * Check if have any message prop from parent if it's a Field.
         */
         hasMessage() {
             return !!this.statusMessage
         },
 
-        /**
+        /*
         * Current password-reveal icon name.
         */
         passwordVisibleIcon() {
             return !this.isPasswordVisible ? 'eye' : 'eye-off'
         },
-        /**
+        /*
         * Get value length
         */
         valueLength() {
@@ -223,7 +230,7 @@ export default {
         }
     },
     watch: {
-        /**
+        /*
         * When v-model is changed:
         *   1. Set internal value.
         *   2. Validate it if the value came from outside;
@@ -244,7 +251,7 @@ export default {
         }
     },
     methods: {
-        /**
+        /*
         * Toggle the visibility of a password-reveal input
         * by changing the type and focus the input right away.
         */
@@ -257,14 +264,17 @@ export default {
             })
         },
 
-        iconClick(emit, event) {
-            this.$emit(emit, event)
+        iconClick(emit: 'icon-click' | 'icon-right-click', event: MouseEvent) {
+            // $emit is overloaded for each of icon-click and icon-right-click
+            // but not for both icon-click | icon-right-click
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            this.$emit(emit as any, event)
             this.$nextTick(() => {
                 this.focus()
             })
         },
 
-        rightIconClick(event) {
+        rightIconClick(event: MouseEvent) {
             if (this.passwordReveal) {
                 this.togglePasswordVisibility()
             } else if (this.iconRightClickable) {
@@ -272,24 +282,24 @@ export default {
             }
         },
 
-        onInput(event) {
+        onInput(event: Event) {
             if (!this.lazy) {
-                const value = event.target.value
+                const value = (event.target as HTMLInputElement | HTMLTextAreaElement).value
                 this.updateValue(value)
             }
         },
 
-        onChange(event) {
+        onChange(event: Event) {
             if (this.lazy) {
-                const value = event.target.value
+                const value = (event.target as HTMLInputElement | HTMLTextAreaElement).value
                 this.updateValue(value)
             }
         },
 
-        updateValue(value) {
+        updateValue(value: string | number | undefined) {
             this.computedValue = value
             !this.isValid && this.checkHtml5Validity()
         }
     }
-}
+})
 </script>

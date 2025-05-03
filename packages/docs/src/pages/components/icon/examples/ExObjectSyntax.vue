@@ -10,12 +10,19 @@
     </section>
 </template>
 
-<script>
-    export default {
+<script lang="ts">
+    import { defineComponent } from 'vue'
+    import { BCheckbox, BIcon } from '@ntohq/buefy-next'
+
+    export default defineComponent({
+        components: {
+            BCheckbox,
+            BIcon,
+        },
         data() {
             return {
                 isGreen: true
             }
         }
-    }
+    })
 </script>
