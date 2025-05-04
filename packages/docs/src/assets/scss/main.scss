@@ -29,6 +29,10 @@
 // Buefy
 @use "@ntohq/buefy-next/src/scss/buefy";
 
+// Color schemes
+@use "_colors";
+
+
 // Highlight.js
 @import "highlight.js/styles/base16/atelier-cave-light.css";
 

@@ -1,6 +1,6 @@
 
 @use "bulma/sass" with (
-    $primary: #7957d5,
+$primary: #7957d5,
 );
 
 $twitter: #4099FF;
@@ -9,10 +9,9 @@ $bulma: #00D1B2;
 $vuetelemetry: #0bdca0;
 
 :root {
-    --primary: #7957d5;
-    --twitter: #4099FF;
-    --discord: #7289DA;
-    --bulma: #00D1B2;
-    --vuetelemetry: #0bdca0;
+  --twitter: #4099FF;
+  --discord: #7289DA;
+  --bulma: #00D1B2;
+  --vuetelemetry: #0bdca0;
 }
 
