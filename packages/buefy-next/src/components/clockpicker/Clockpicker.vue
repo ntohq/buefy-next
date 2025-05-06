@@ -20,11 +20,12 @@
                     <b-input
                         ref="input"
                         autocomplete="off"
-                        :value="editable ? localInputValue : formatValue(computedValue)"
+                        :value="formatValue(computedValue)"
                         :placeholder="placeholder"
                         :size="size"
                         :icon="icon"
                         :icon-pack="iconPack"
+                        :lazy="editable"
                         :loading="loading"
                         :disabled="disabledOrUndefined"
                         :readonly="!editable"
@@ -32,12 +33,10 @@
                         v-bind="fallthroughAttrs"
                         :use-html5-validation="useHtml5Validation"
                         @click="onInputClick"
-                        @keyup.enter="(event: KeyboardEvent) => {toggle(true); onEditDone(event)}"
-                        @keyup.escape="onEditDone"
-                        @input="onInput"
-                        @change="onChange($event.target.value)"
+                        @keyup.enter="toggle(true)"
+                        @update:model-value="(value) => onChange(value as string)"
                         @focus="handleOnFocus"
-                        @blur="onBlur()"
+                        @blur="checkHtml5Validity()"
                     />
                 </slot>
             </template>
@@ -166,7 +165,7 @@
             @keyup.enter="toggle(true)"
             @change="onChangeNativePicker"
             @focus="handleOnFocus"
-            @blur="onBlur()"
+            @blur="onBlur() && checkHtml5Validity()"
         />
     </div>
 </template>
@@ -225,9 +224,7 @@ export default defineComponent({
         return {
             isSelectingHour: true,
             isDragging: false,
-            _isClockpicker: true,
-            localInputValue: '' as string,
-            isEditing: false
+            _isClockpicker: true
         }
     },
     computed: {
@@ -269,16 +266,6 @@ export default defineComponent({
             return this.isSelectingHour ? this.isHourDisabled : this.isMinuteDisabled
         }
     },
-    watch: {
-        computedValue: {
-            handler(val) {
-                if (!this.isEditing) {
-                    this.localInputValue = this.formatValue(val) || ''
-                }
-            },
-            immediate: true
-        }
-    },
     methods: {
         onClockInput(value: number) {
             if (this.isSelectingHour) {
@@ -306,35 +293,6 @@ export default defineComponent({
         onInputClick(event: MouseEvent) {
             if ((this.$refs.dropdown as BDropdownInstance).isActive) {
                 event.stopPropagation()
-            }
-        },
-        onInput(event: Event) {
-            if (!this.editable) return
-            this.isEditing = true
-            this.localInputValue = (event.target as HTMLInputElement).value
-        },
-        onBlur() {
-            this.checkHtml5Validity()
-            if (!this.editable) return
-
-            const date = this.timeParser(this.localInputValue, this)
-            if (date && !isNaN(date.valueOf())) {
-                this.computedValue = date
-            } else {
-                // Reset to last valid value
-                this.localInputValue = this.formatValue(this.computedValue) || ''
-            }
-        },
-        onEditDone(event: KeyboardEvent) {
-            if (!this.editable) return
-
-            if (event.key === 'Enter') {
-                this.isEditing = false
-                this.onBlur()
-            } else if (event.key === 'Escape') {
-                this.isEditing = false
-                // Revert to the previous value without parsing the input
-                this.localInputValue = this.formatValue(this.computedValue) || ''
             }
         }
     },
