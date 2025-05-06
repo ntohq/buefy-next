@@ -12,6 +12,7 @@ Buefy-next 0.2.1 is now compiled with Vue 3.4.13, so the recommended Vue version
 * [#434](https://github.com/ntohq/buefy-next/issues/434) The multi column sorting feature of `Table` did not work since Buefy-next v0.2.0.
 * [#460](https://github.com/ntohq/buefy-next/issues/460) The `editable` prop of `Clockpicker` did not work (thanks @Moritz-Schmidt)
 * [#461](https://github.com/ntohq/buefy-next/pull/461) The initial value of `Clockpicker` was not rendered (thanks @Moritz-Schmidt)
+* [#461](https://github.com/ntohq/buefy-next/pull/461) `Clockpicker` did not work on a mobile device
 
 ### Others
 
