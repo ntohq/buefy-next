@@ -297,7 +297,10 @@ export default defineComponent({
         }
     },
     mounted() {
-        (this.$refs.input as BInputInstance).newValue = this.formatValue(this.computedValue) || ''
+        // this.$refs.input may be undefined if the `inline` prop is true
+        if (this.$refs.input != null) {
+            (this.$refs.input as BInputInstance).newValue = this.formatValue(this.computedValue) || ''
+        }
     }
 })
 </script>
