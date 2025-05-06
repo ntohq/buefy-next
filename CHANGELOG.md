@@ -10,6 +10,7 @@ Buefy-next 0.2.1 is now compiled with Vue 3.4.13, so the recommended Vue version
   `SlotComponent` which is internally used by `Table`, and `Tabs` ceased adding the update hook to the component specified to the `component` prop, and dropped the `event` prop.
 * [#429](https://github.com/ntohq/buefy-next/issues/429) `Numberinput` may have accepted an invalid number as valid with Vue 3.4.28 or higher.
 * [#434](https://github.com/ntohq/buefy-next/issues/434) The multi column sorting feature of `Table` did not work since Buefy-next v0.2.0.
+* [#460](https://github.com/ntohq/buefy-next/issues/460) The `editable` prop of `Clockpicker` did not work (thanks @Moritz-Schmidt)
 
 ### Others
 
