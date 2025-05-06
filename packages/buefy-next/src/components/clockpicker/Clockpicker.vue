@@ -20,12 +20,11 @@
                     <b-input
                         ref="input"
                         autocomplete="off"
-                        :value="formatValue(computedValue)"
+                        :model-value="formatValue(computedValue)"
                         :placeholder="placeholder"
                         :size="size"
                         :icon="icon"
                         :icon-pack="iconPack"
-                        :lazy="editable"
                         :loading="loading"
                         :disabled="disabledOrUndefined"
                         :readonly="!editable"
@@ -34,7 +33,7 @@
                         :use-html5-validation="useHtml5Validation"
                         @click="onInputClick"
                         @keyup.enter="toggle(true)"
-                        @update:model-value="(value) => onChange(value as string)"
+                        @change="onChange($event.target.value)"
                         @focus="handleOnFocus"
                         @blur="checkHtml5Validity()"
                     />
@@ -149,7 +148,7 @@
             ref="input"
             type="time"
             autocomplete="off"
-            :value="formatHHMMSS(computedValue)"
+            :model-value="formatHHMMSS(computedValue)"
             :placeholder="placeholder"
             :size="size"
             :icon="icon"
@@ -182,7 +181,6 @@ import BInput from '../input/Input.vue'
 import BClockpickerFace from './ClockpickerFace.vue'
 
 type BDropdownInstance = InstanceType<typeof BDropdown>
-type BInputInstance = InstanceType<typeof BInput>
 
 const outerPadding = 12
 
@@ -294,12 +292,6 @@ export default defineComponent({
             if ((this.$refs.dropdown as BDropdownInstance).isActive) {
                 event.stopPropagation()
             }
-        }
-    },
-    mounted() {
-        // this.$refs.input may be undefined if the `inline` prop is true
-        if (this.$refs.input != null) {
-            (this.$refs.input as BInputInstance).newValue = this.formatValue(this.computedValue) || ''
         }
     }
 })
